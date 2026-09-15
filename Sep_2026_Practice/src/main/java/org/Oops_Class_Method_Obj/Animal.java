@@ -1,17 +1,20 @@
-package org.Oops;
+package org.Oops_Class_Method_Obj;
+/*
+classification of Basic_Constructer
 
-public class Test002Cons {
-    Test002Cons (){
+ */
+public class Animal {
+    Animal(){
         System.out.println("constructer");
     }
-    Test002Cons (String s){
+    Animal(String s){
         System.out.println("para constructer");
     }
-    Test002Cons (int  a){
+    Animal(int  a){
         System.out.println("para constructer");
     }
     public static void main(String[] args) {
-        Test002Cons ts = new Test002Cons("Sameer");
+        Animal ts = new Animal("Sameer");
     }
 }
 /*

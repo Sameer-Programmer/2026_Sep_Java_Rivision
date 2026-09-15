@@ -1,6 +1,10 @@
-package org.Oops;
+package org.Oops_Class_Method_Obj;
 
-public class Test001_CMO {
+/*
+classification of class , Methods , Objects
+ */
+
+public class Fruits {
 
     int a =10; // instance variables
     int b = 20;
@@ -23,10 +27,10 @@ public class Test001_CMO {
 
     public static void main(String[] args) {
         System.out.println(d);
-        Test001_CMO test001Cmo = new Test001_CMO();
-        test001Cmo.m1(1,2);
-        test001Cmo.m2();
-        System.out.println( test001Cmo.m3());
+        Fruits fruits = new Fruits();
+        fruits.m1(1,2);
+        fruits.m2();
+        System.out.println( fruits.m3());
 
 
 
