@@ -8,7 +8,7 @@
   <a href="https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision"><img src="https://img.shields.io/badge/Repository-Java%20Revision-1f6feb?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
   <img src="https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21" />
   <img src="https://img.shields.io/badge/Maven-Project-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven project" />
-  <img src="https://img.shields.io/badge/Exercises-103-2ea44f?style=for-the-badge" alt="103 Java source files" />
+  <img src="https://img.shields.io/badge/Exercises-104-2ea44f?style=for-the-badge" alt="104 Java source files" />
 </p>
 
 <p>
@@ -38,6 +38,7 @@ flowchart LR
     A[☕ Java Revision] --> B[🧱 Foundations]
     A --> C[🧩 Problem Solving]
     A --> D[🏛️ OOP]
+    A --> E[🧪 Selenium]
 
     B --> B1[Variables & Scope]
     B --> B2[Type Casting]
@@ -56,11 +57,16 @@ flowchart LR
     D --> D4[Inheritance & Abstraction]
     D --> D5[Interfaces]
     D --> D6[Overloading & Overriding]
+
+    E --> E1[Locators]
+    E --> E2[WebDriver Methods]
+    E --> E3[Waits & Navigation]
+    E --> E4[Window Handles]
 ```
 
 ## 📚 What is covered
 
-The examples currently include **103 Java source files** plus supporting notes across the following areas:
+The examples currently include **104 Java source files** plus supporting notes across the following areas:
 
 | Icon | Area | Package(s) | Focus |
 | :---: | --- | --- | --- |
@@ -82,6 +88,7 @@ The examples currently include **103 Java source files** plus supporting notes a
 | ⬆️ | `super` keyword | `oops.SuperkeyWord` | Parent constructors, methods, fields, and initialization behavior |
 | 🔐 | Access and final keywords | `oops.AccessModifiers`, `oops.finalKeyWord` | Access control and the use of `final` |
 | 🔌 | Interfaces | `oops.interfaceConcepts` | Interface notes, differences, and implementation examples |
+| 🧪 | Selenium practice | `seleniumPart1` | Locators, WebDriver methods, conditional methods, waits, navigation, and window handles using TestNG |
 
 ## 🗂️ Project structure
 
@@ -89,30 +96,38 @@ The examples currently include **103 Java source files** plus supporting notes a
 Sep_2026_Practice/
 ├── pom.xml
 ├── README.md
-└── src/main/java/
-    ├── foundation/
-    │   ├── Arrays_Concept/
-    │   ├── Arrays_Problems/
-    │   ├── Collections_Concept/
-    │   ├── Collections_Problems/
-    │   ├── ConceptWrapperClass/
-    │   ├── Maths_Problems/
-    │   ├── Strings/
-    │   ├── SwitchCase_Example/
-    │   ├── TypeCating_Example/
-    │   ├── Warmup/
-    │   └── conceptExeception/
-    └── oops/
-        ├── AccessModifiers/
-        ├── Class_Method_Obj/
-        ├── ConceptAbstraction/
-        ├── Concepts_Constructer/
-        ├── Concepts_Encapsulation/
-        ├── Concepts_Inheritance/
-        ├── Concepts_MethodOverLoading_Riding/
-        ├── SuperkeyWord/
-        ├── finalKeyWord/
-        └── interfaceConcepts/
+├── src/main/java/
+│   ├── foundation/
+│   │   ├── Arrays_Concept/
+│   │   ├── Arrays_Problems/
+│   │   ├── Collections_Concept/
+│   │   ├── Collections_Problems/
+│   │   ├── ConceptWrapperClass/
+│   │   ├── Maths_Problems/
+│   │   ├── Strings/
+│   │   ├── SwitchCase_Example/
+│   │   ├── TypeCating_Example/
+│   │   ├── Warmup/
+│   │   └── conceptExeception/
+│   └── oops/
+│       ├── AccessModifiers/
+│       ├── Class_Method_Obj/
+│       ├── ConceptAbstraction/
+│       ├── Concepts_Constructer/
+│       ├── Concepts_Encapsulation/
+│       ├── Concepts_Inheritance/
+│       ├── Concepts_MethodOverLoading_Riding/
+│       ├── SuperkeyWord/
+│       ├── finalKeyWord/
+│       └── interfaceConcepts/
+└── src/test/java/
+    └── seleniumPart1/
+        ├── Test001Locators/
+        ├── Test002WebDriverMethods/
+        ├── Test003ConditionalMethods/
+        ├── Test004Waits/
+        ├── Test005NavigationMethods/
+        └── Test006WindowHandles/
 ```
 
 ## 🚀 Getting started
@@ -132,7 +147,7 @@ cd Sep_2026_Practice
 mvn clean test
 ```
 
-This is a collection of standalone examples and does not currently contain a JUnit test suite. Maven is used primarily to compile the project and check that the source tree is wired correctly.
+The project contains standalone Java examples together with Selenium/TestNG practice tests. Maven compiles the main source tree and runs the configured test sources; browser-based examples may require a compatible browser and driver setup.
 
 ### ▶️ Run an individual exercise
 
@@ -147,6 +162,17 @@ java -cp out foundation.Maths_Problems.Test003_PrimeNumberCheck
 
 For examples that depend on other source files, compile the complete source tree through Maven or configure `src/main/java` as the source root in your IDE.
 
+### 🧪 Run the Selenium practice tests
+
+The Selenium examples are located under `src/test/java/seleniumPart1` and use TestNG. Run them with:
+
+```bash
+cd Sep_2026_Practice
+mvn test
+```
+
+Browser-launching examples may need a locally installed browser, matching driver, and any required test configuration before they can run successfully.
+
 ## 🪜 Suggested revision order
 
 1. **Start with foundations** — variables, scope, type casting, wrapper classes, and `switch` statements.
@@ -155,7 +181,8 @@ For examples that depend on other source files, compile the complete source tree
 4. **Practice strings and collections** — indexing, mutability, equality, frequency counting, and duplicate handling.
 5. **Build the OOP foundation** — classes, objects, constructors, encapsulation, access modifiers, and `final`.
 6. **Complete the OOP path** — inheritance, abstraction, interfaces, overloading, overriding, and `super`.
-7. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
+7. **Explore Selenium practice** — locators, browser actions, waits, navigation, and window handling.
+8. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
 
 ## 💡 Practice approach
 
@@ -179,7 +206,7 @@ The repository contains both executable Java examples and plain-text revision no
 
 ## ⚠️ Current limitations
 
-- There are no automated unit tests yet; `mvn test` primarily serves as a compilation check.
+- The test sources currently focus on Selenium/TestNG practice rather than a broad unit-test suite; browser-based tests may require local setup.
 - Some filenames and package names retain historical spelling and capitalization choices from the practice sessions.
 - No license file is currently included. Add an appropriate license before redistributing the code publicly or incorporating it into another project.
 
