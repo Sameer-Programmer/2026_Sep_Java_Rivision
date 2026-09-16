@@ -1,159 +1,194 @@
-# Java Revision Lab
-
 <div align="center">
 
-  <h2>September 2026 Java Practice</h2>
-  <p>A focused collection of small, executable Java programs for rebuilding core programming fundamentals and object-oriented thinking.</p>
+# ☕ September 2026 Java Revision
 
-  <p>
-    <a href="https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision/tree/sameer/Sep_2026_Practice">Explore the practice module</a>
-    ·
-    <a href="https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision/tree/sameer/Sep_2026_Practice/src/main/java">Browse source code</a>
-  </p>
+### A focused, hands-on notebook for mastering Java fundamentals, problem solving, collections, and OOP.
 
-  <p>
-    <img src="https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21" />
-    <img src="https://img.shields.io/badge/Maven-project-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven project" />
-    <img src="https://img.shields.io/badge/Exercises-97-2F80ED?style=for-the-badge" alt="97 Java exercises" />
-    <img src="https://img.shields.io/badge/Status-active-27AE60?style=for-the-badge" alt="Active project" />
-  </p>
+<p>
+  <a href="https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision"><img src="https://img.shields.io/badge/Repository-Java%20Revision-1f6feb?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
+  <img src="https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21" />
+  <img src="https://img.shields.io/badge/Maven-Project-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven project" />
+  <img src="https://img.shields.io/badge/Exercises-103-2ea44f?style=for-the-badge" alt="103 Java source files" />
+</p>
+
+<p>
+  <a href="./src/main/java">📂 Browse source</a>
+  ·
+  <a href="./pom.xml">⚙️ View Maven config</a>
+  ·
+  <a href="https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision">⭐ Visit repository</a>
+</p>
 
 </div>
 
-> **Learning by implementation:** each class is intentionally small, readable, and easy to run in isolation. Use the examples to understand a concept, then modify the inputs and implementation to test your own understanding.
+---
 
-## What this repository covers
+> **Learning by implementation:** small, executable examples make each concept easy to read, run, modify, and understand.
 
-This module moves from language fundamentals to practical problem solving and object-oriented programming. The examples include variable scope, type casting, conditional logic, loops, arrays, strings, mathematical algorithms, constructors, encapsulation, inheritance, method overloading, method overriding, and the `super` keyword.
+## 🧭 About this project
 
-The source is arranged by concept rather than by application layer, which makes it useful as a revision index: choose a topic, open a class, run its `main` method, and inspect the result.
+This repository is a practical Java revision notebook built from focused examples and nearby study notes. It progresses from language fundamentals and algorithmic problem solving into collections and object-oriented programming.
 
-## Learning map
+The project is intentionally maintained as learning material rather than a production application. Class names and a few original spelling variations are retained to preserve the progression of the revision sessions.
+
+## 🗺️ Learning map
 
 ```mermaid
 flowchart LR
-    A[Java Revision Lab] --> B[Foundations]
-    A --> C[Object-Oriented Programming]
+    A[☕ Java Revision] --> B[🧱 Foundations]
+    A --> C[🧩 Problem Solving]
+    A --> D[🏛️ OOP]
 
-    B --> B1[Maths problems]
-    B --> B2[Arrays]
-    B --> B3[Strings]
-    B --> B4[Warmups]
-    B --> B5[Control flow & types]
+    B --> B1[Variables & Scope]
+    B --> B2[Type Casting]
+    B --> B3[Switch Case]
+    B --> B4[Wrapper Classes]
 
-    B1 --> B1a[Prime · GCD · Fibonacci]
-    B1 --> B1b[Factorial · Power · Armstrong]
-    B2 --> B2a[Copy · rotate · search]
-    B2 --> B2b[Duplicates · subarrays · sums]
-    B3 --> B3a[Reverse · anagram · frequency]
-    B3 --> B3b[Substrings · cleanup · capitalization]
-    B4 --> B4a[Binary search · min/max]
-    B5 --> B5a[Switch case · type casting]
+    C --> C1[🔢 Maths]
+    C --> C2[🔡 Arrays]
+    C --> C3[🔤 Strings]
+    C --> C4[🧰 Collections]
+    C --> C5[🔥 Warmups]
 
-    C --> C1[Constructors]
-    C --> C2[Encapsulation]
-    C --> C3[Inheritance]
-    C --> C4[Overloading & overriding]
-    C --> C5[super keyword]
+    D --> D1[Classes & Objects]
+    D --> D2[Constructors]
+    D --> D3[Encapsulation]
+    D --> D4[Inheritance & Abstraction]
+    D --> D5[Interfaces]
+    D --> D6[Overloading & Overriding]
 ```
 
-## Project structure
+## 📚 What is covered
+
+The examples currently include **103 Java source files** plus supporting notes across the following areas:
+
+| Icon | Area | Package(s) | Focus |
+| :---: | --- | --- | --- |
+| 🧱 | Java foundations | `foundation.Maths_Problems`, `foundation.SwitchCase_Example`, `foundation.TypeCating_Example` | Variables, scope, type casting, `switch`, prime numbers, Fibonacci, factorial, Armstrong numbers, GCD, perfect numbers, powers, leap years, and number manipulation |
+| 📦 | Array concepts | `foundation.Arrays_Concept` | Array declarations, traversal, and arrays of objects |
+| 🔁 | Array problems | `foundation.Arrays_Problems` | Searching, copying, sorting, rotations, two-sum, missing values, duplicates, non-repeated values, maximum sums, averages, products, and even/odd separation |
+| 🧺 | Collections concepts | `foundation.Collections_Concept` | `ArrayList`, `HashSet`, and `HashMap` basics |
+| 🧮 | Collections problems | `foundation.Collections_Problems` | Removing duplicates, moving zeroes, merging arrays, frequency counting, majority elements, shuffling, common elements, and partitioning values |
+| 🔤 | String problems | `foundation.Strings` | Reversal, character separation, duplicates, frequency counting, anagrams, substrings, word comparisons, swapping, whitespace cleanup, capitalization, and conversion |
+| 🔥 | Warmups | `foundation.Warmup` | Duplicate detection, rotations, maximum sums, target subarrays, binary search, minimum values, and string-to-number conversion |
+| 🔄 | Wrapper classes | `foundation.ConceptWrapperClass` | Java wrapper types and conversions such as `Integer.parseInt` |
+| 🛡️ | Exception handling | `foundation.conceptExeception` | `try`, `catch`, `finally`, `throw`, `throws`, checked exceptions, unchecked exceptions, and catch ordering |
+| 🧩 | Classes and objects | `oops.Class_Method_Obj` | Basic classes, methods, objects, and simple domain examples |
+| 🏗️ | Constructors | `oops.Concepts_Constructer` | Default and parameterized constructors and object initialization |
+| 🔒 | Encapsulation | `oops.Concepts_Encapsulation` | Private state with getters and setters using a `Bank` example |
+| 🌳 | Inheritance | `oops.Concepts_Inheritance` | Parent-child relationships and inherited behavior |
+| 🧠 | Abstraction | `oops.ConceptAbstraction` | Abstract-class and abstract-behavior notes and examples |
+| 🔀 | Overloading and overriding | `oops.Concepts_MethodOverLoading_Riding` | Compile-time overloading, runtime overriding, and static method hiding |
+| ⬆️ | `super` keyword | `oops.SuperkeyWord` | Parent constructors, methods, fields, and initialization behavior |
+| 🔐 | Access and final keywords | `oops.AccessModifiers`, `oops.finalKeyWord` | Access control and the use of `final` |
+| 🔌 | Interfaces | `oops.interfaceConcepts` | Interface notes, differences, and implementation examples |
+
+## 🗂️ Project structure
 
 ```text
 Sep_2026_Practice/
 ├── pom.xml
 ├── README.md
-└── src/
-    └── main/
-        └── java/
-            ├── Foundation/
-            │   ├── Arrays_Problems/
-            │   ├── Maths_Problems/
-            │   ├── Strings/
-            │   ├── SwitchCase_Example/
-            │   ├── TypeCating_Example/
-            │   └── Warmup/
-            └── Oops/
-                ├── Concepts_Constructor/
-                ├── Concepts_Encapsulation/
-                ├── Concepts_Inheritance/
-                ├── Concepts_MethodOverLoading_Riding/
-                └── SuperkeyWord/
+└── src/main/java/
+    ├── foundation/
+    │   ├── Arrays_Concept/
+    │   ├── Arrays_Problems/
+    │   ├── Collections_Concept/
+    │   ├── Collections_Problems/
+    │   ├── ConceptWrapperClass/
+    │   ├── Maths_Problems/
+    │   ├── Strings/
+    │   ├── SwitchCase_Example/
+    │   ├── TypeCating_Example/
+    │   ├── Warmup/
+    │   └── conceptExeception/
+    └── oops/
+        ├── AccessModifiers/
+        ├── Class_Method_Obj/
+        ├── ConceptAbstraction/
+        ├── Concepts_Constructer/
+        ├── Concepts_Encapsulation/
+        ├── Concepts_Inheritance/
+        ├── Concepts_MethodOverLoading_Riding/
+        ├── SuperkeyWord/
+        ├── finalKeyWord/
+        └── interfaceConcepts/
 ```
 
-## Topic guide
+## 🚀 Getting started
 
-| Area | Package | Representative practice |
-|---|---|---|
-| Mathematical problem solving | `Foundation.Maths_Problems` | Prime checks, GCD, Fibonacci, factorial, powers, Armstrong numbers, leap years, swapping, counting, and largest-number exercises |
-| Array problem solving | `Foundation.Arrays_Problems` | Copying arrays, rotations, duplicate detection, and array transformations |
-| String problem solving | `Foundation.Strings` | Reversal, character separation, duplicate removal, frequency counting, anagrams, substrings, and capitalization |
-| Algorithm warmups | `Foundation.Warmup` | Binary search, minimum and maximum values, target sums, duplicate discovery, and subarray problems |
-| Language foundations | `Foundation.SwitchCase_Example`, `Foundation.TypeCating_Example` | `switch`-based control flow and type-casting examples |
-| Constructors | `Oops.Concepts_Constructor` | Default and parameterized constructors, object initialization, and constructor behavior |
-| Encapsulation | `Oops.Concepts_Encapsulation` | Private state with getters and setters through a simple `Bank` example |
-| Inheritance | `Oops.Concepts_Inheritance` | Parent-child relationships and inherited behavior |
-| Overloading and overriding | `Oops.Concepts_MethodOverLoading_Riding` | Compile-time overloading and runtime overriding, including static-method behavior |
-| `super` keyword | `Oops.SuperkeyWord` | Parent constructors, parent methods, parent fields, and initialization blocks |
+### ✅ Prerequisites
 
-## Quick start
+- **JDK 21**, as configured in `pom.xml`
+- **Maven 3.9+** for the Maven workflow
+- IntelliJ IDEA, Eclipse, or Visual Studio Code with Java support
 
-### Prerequisites
+### ⚙️ Compile with Maven
 
-- **JDK 21** or a compatible newer JDK
-- **Maven 3.9+** if you want to use the project descriptor from the command line
-- An IDE such as IntelliJ IDEA, Eclipse, or Visual Studio Code with Java support
-
-### Compile with Maven
-
-From this directory:
+From the repository root:
 
 ```bash
 cd Sep_2026_Practice
 mvn clean test
 ```
 
-The project currently contains standalone examples rather than a JUnit test suite, so `test` primarily verifies that the source compiles successfully.
+This is a collection of standalone examples and does not currently contain a JUnit test suite. Maven is used primarily to compile the project and check that the source tree is wired correctly.
 
-### Run an individual exercise
+### ▶️ Run an individual exercise
 
-Each example with a `main` method can be run independently. For example:
+Run any class that contains a `main` method. For example:
 
 ```bash
 cd Sep_2026_Practice
-javac -d out src/main/java/Foundation/Maths_Problems/Test003_PrimeNumberCheck.java
-java -cp out Foundation.Maths_Problems.Test003_PrimeNumberCheck
+mkdir -p out
+javac -d out src/main/java/foundation/Maths_Problems/Test003_PrimeNumberCheck.java
+java -cp out foundation.Maths_Problems.Test003_PrimeNumberCheck
 ```
 
-For a multi-file IDE workflow, mark `src/main/java` as the source root and run the `main` method from the class you want to study.
+For examples that depend on other source files, compile the complete source tree through Maven or configure `src/main/java` as the source root in your IDE.
 
-## Suggested revision path
+## 🪜 Suggested revision order
 
-1. Start with declarations, variables, type casting, `switch`, and simple mathematical exercises.
-2. Continue with arrays and strings to practice loops, indexing, conditions, and common transformations.
-3. Use the warmup problems to compare straightforward solutions with more efficient approaches such as binary search.
-4. Study constructors and encapsulation before moving into inheritance.
-5. Finish with overloading, overriding, static method dispatch, and the `super` keyword.
-6. For every exercise, change the input values and add at least one edge case before moving on.
+1. **Start with foundations** — variables, scope, type casting, wrapper classes, and `switch` statements.
+2. **Strengthen logic** — mathematical problems, loops, conditions, arithmetic, and input reasoning.
+3. **Master arrays** — concepts, searching, sorting, rotations, duplicates, and subarray problems.
+4. **Practice strings and collections** — indexing, mutability, equality, frequency counting, and duplicate handling.
+5. **Build the OOP foundation** — classes, objects, constructors, encapsulation, access modifiers, and `final`.
+6. **Complete the OOP path** — inheritance, abstraction, interfaces, overloading, overriding, and `super`.
+7. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
 
-## How to use this repository effectively
+## 💡 Practice approach
 
-The class names preserve the progression of the practice sessions, including a few original spelling variations. Treat those names as part of the learning history rather than renaming them while revising. Keep experiments local to a class, write down the expected output before running it, and compare the result with the implementation line by line.
+For every exercise:
 
-When revisiting an exercise, try to improve it in three passes: first make it correct, then make the intent easier to read, and finally consider whether the algorithm can be simplified or made more efficient. This keeps the repository useful both as a record of practice and as a growing reference library.
+1. Write down the expected output.
+2. Trace the program line by line.
+3. Change the input and test an edge case.
+4. Refactor for readability after the solution is correct.
+5. Consider whether the algorithm or data structure can be simplified.
 
-## Repository navigation
+The repository contains both executable Java examples and plain-text revision notes. Notes are kept near related examples so that concepts and code can be studied together.
 
-- [Parent repository](https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision)
-- [Practice source tree](./src/main/java)
-- [Maven configuration](./pom.xml)
+## 🔗 Quick links
 
-## License
+| Resource | Link |
+| --- | --- |
+| 🏠 Repository | [2026_Sep_Java_Rivision](https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision) |
+| 📂 Java source tree | [`src/main/java`](./src/main/java) |
+| ⚙️ Maven configuration | [`pom.xml`](./pom.xml) |
 
-No license file is currently included in this module. Add a license before redistributing the code publicly or incorporating it into another project.
+## ⚠️ Current limitations
+
+- There are no automated unit tests yet; `mvn test` primarily serves as a compilation check.
+- Some filenames and package names retain historical spelling and capitalization choices from the practice sessions.
+- No license file is currently included. Add an appropriate license before redistributing the code publicly or incorporating it into another project.
 
 ---
 
 <div align="center">
-  <sub>Built as a practical Java revision notebook.</sub>
+
+### ⭐ Keep learning. Keep building. Keep revising.
+
+<sub>Built as a practical Java revision notebook.</sub>
+
 </div>
