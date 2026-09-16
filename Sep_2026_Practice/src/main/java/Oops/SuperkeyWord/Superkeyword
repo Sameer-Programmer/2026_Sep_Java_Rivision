@@ -1,0 +1,70 @@
+SUPER KEYWORD — SHORT NOTES
+
+1. super refers to the immediate parent class.
+
+2. super() is used to call the parent class constructor.
+
+3. super() must be the FIRST statement inside the child constructor.
+
+4. If we don't write super(), Java automatically adds:
+   super();
+
+5. If we write super("value"), it calls the matching
+   parameterized constructor of the parent class.
+
+6. If super("value") is explicitly written, the parent
+   default constructor is NOT called.
+
+7. Only ONE super() constructor can be called from a
+   child constructor.
+
+8. super.variable → Access parent class variable.
+
+9. super.method() → Call parent class method.
+
+Example:
+
+class Vehicle {
+    Vehicle() {
+        System.out.println("Vehicle");
+    }
+
+    Vehicle(String model) {
+        System.out.println("Vehicle Model");
+    }
+}
+
+class Car extends Vehicle {
+    Car() {
+        super("BMW");   // Calls Vehicle(String)
+        System.out.println("Car");
+    }
+}
+
+Output:
+Vehicle Model
+Car
+
+
+IMPORTANT:
+super()              → Parent default constructor
+super(value)         → Parent parameterized constructor
+super.variable       → Parent variable
+super.method()       → Parent method
+
+===============
+super.variable → Parent class variable
+
+Can be used inside:
+    ✅ Child method
+    ✅ Child constructor
+    ✅ Child instance block
+
+    =======================
+
+    super.method() → Calls the parent class method.
+
+    It can be used inside the child class:
+        ✅ Child method
+        ✅ Child constructor
+        ✅ Child instance block

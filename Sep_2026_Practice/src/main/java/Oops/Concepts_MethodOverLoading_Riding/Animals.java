@@ -1,6 +1,4 @@
-package OopsConcepts_MethodOverLoading_Riding;
-
-import org.Oops_Class_Method_Obj.Animal;
+package Oops.Concepts_MethodOverLoading_Riding;
 
 public class Animals {
 

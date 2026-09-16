@@ -1,4 +1,4 @@
-package OopsConcepts_Inheritance;
+package Oops.Concepts_Inheritance;
 
 public class A {
     int a =10;

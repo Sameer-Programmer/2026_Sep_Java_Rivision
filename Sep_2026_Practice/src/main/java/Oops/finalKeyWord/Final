@@ -1,0 +1,6 @@
+
+final class Sameer --> No Inheritance
+final int 10 ---> Value can not be changed
+final m1(){
+	--> // No Overiding
+}

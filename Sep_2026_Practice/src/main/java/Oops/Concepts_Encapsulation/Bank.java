@@ -1,4 +1,4 @@
-package OopsConcepts_Encapsulation;
+package Oops.Concepts_Encapsulation;
 //DemoEncapsulation
 public class Bank {
     private String customerName ;
