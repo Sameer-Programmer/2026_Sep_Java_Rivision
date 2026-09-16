@@ -1,0 +1,25 @@
+WebDriver
+   │
+   ├── get()
+   ├── findElement()
+   ├── findElements()
+   ├── getTitle()
+   ├── getCurrentUrl()
+   ├── close()
+   ├── quit()
+   │
+   ├── navigate()
+   │     ├── to()
+   │     ├── back()
+   │     ├── forward()
+   │     └── refresh()
+   │
+   ├── switchTo()
+   │     ├── alert()
+   │     ├── frame()
+   │     └── window()
+   │
+   └── manage()
+         ├── window()
+         ├── timeouts()
+         └── cookies()

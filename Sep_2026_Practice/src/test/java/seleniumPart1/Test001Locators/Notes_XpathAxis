@@ -1,0 +1,16 @@
+| Axis                 | Meaning                                              |
+| -------------------- | ---------------------------------------------------- |
+| `parent`             | Direct parent                                        |
+| `child`              | Direct children                                      |
+| `ancestor`           | All parents above the element                        |
+| `ancestor-or-self`   | Ancestors + current element                          |
+| `descendant`         | All elements below                                   |
+| `descendant-or-self` | Descendants + current element                        |
+| `following-sibling`  | Elements after the current sibling                   |
+| `preceding-sibling`  | Elements before the current sibling                  |
+| `following`          | All elements appearing after current element in DOM  |
+| `preceding`          | All elements appearing before current element in DOM |
+| `self`               | Current element                                      |
+
+
+//tag[@attribute='value']/axis::tag
