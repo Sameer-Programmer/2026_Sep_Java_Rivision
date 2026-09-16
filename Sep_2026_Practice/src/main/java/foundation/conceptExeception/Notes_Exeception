@@ -1,0 +1,35 @@
+EXCEPTION HANDLING — QUICK REVISION
+
+1. Exception disrupts normal program execution.
+
+2. try → Code that may cause exception.
+
+3. catch → Handles exception.
+
+4. finally → Cleanup code; generally executes regardless
+   of whether an exception occurs.
+
+5. throw → Explicitly throws an exception.
+
+6. throws → Declares exception in method signature.
+
+7. Checked Exception
+   → Compiler checks it.
+   → Example: IOException
+
+8. Unchecked Exception
+   → RuntimeException and its subclasses.
+   → Example: NullPointerException
+
+9. Error and Exception are both under Throwable.
+
+10. Multiple catch blocks can be used.
+
+11. A try block must be followed by catch or finally.
+
+12. One try can have multiple catch blocks.
+
+13. Parent exception catch should come AFTER child exception catch.
+
+14. Exception handling helps prevent abnormal termination
+    and allows the program to handle failures gracefully.

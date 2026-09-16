@@ -1,4 +1,4 @@
-package foundation.Oops_Class_Method_Obj;
+package oops.Class_Method_Obj;
 
 /*
 classification of class , Methods , Objects

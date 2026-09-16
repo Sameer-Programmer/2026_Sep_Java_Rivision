@@ -1,0 +1,51 @@
+STRING CONVERSION — SHORT NOTES
+
+String.valueOf() can convert primitive values and objects into a String.
+
+String.valueOf()
+    ↓
+Converts a value into String format.
+
+
+Primitive → String
+
+int     → String
+double  → String
+float   → String
+long    → String
+char    → String
+boolean → String
+short   → String
+byte    → String
+
+
+Examples:
+
+int a = 10;
+String s1 = String.valueOf(a);
+
+double b = 10.5;
+String s2 = String.valueOf(b);
+
+char c = 'A';
+String s3 = String.valueOf(c);
+
+boolean d = true;
+String s4 = String.valueOf(d);
+
+
+Important:
+
+String.valueOf(10)
+        ↓
+"10"       // String
+
+
+String.valueOf(true)
+        ↓
+"true"     // String
+
+
+String.valueOf('A')
+        ↓
+"A"        // String
