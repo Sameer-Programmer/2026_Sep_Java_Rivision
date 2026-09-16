@@ -1,0 +1,30 @@
+INTERFACE
+
+1. Declared using interface keyword.
+
+2. A class uses implements to implement an interface.
+
+3. Abstract methods in an interface are implemented
+   by the implementing class.
+
+4. Cannot create an interface object directly.
+
+   Vehicle v = new Vehicle();  // ❌
+
+5. Interface does NOT have a normal constructor.
+
+6. Variables in an interface are automatically:
+   public static final
+
+7. Methods can be:
+   → public abstract (traditional abstract methods)
+   → default
+   → static
+   → private (Java 9+)
+
+8. A class can implement MULTIPLE interfaces.
+
+9. Interface supports multiple inheritance.
+
+   class HyundaiCar implements Vehicle, Engine {
+   }

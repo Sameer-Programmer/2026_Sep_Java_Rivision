@@ -1,0 +1,19 @@
+ABSTRACT CLASS                 INTERFACE
+
+abstract class Vehicle          interface Vehicle
+
+extends                         implements
+
+Can have constructor            No normal constructor
+
+Can have instance variables     Variables are public static final
+
+Can have abstract methods       Can have abstract methods
+
+Can have concrete methods       Can have default/static methods
+
+A class can extend              A class can implement
+only ONE class                  MULTIPLE interfaces
+
+Used when classes have          Used to define a contract
+a common relationship            / capability
