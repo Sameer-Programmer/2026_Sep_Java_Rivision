@@ -14,7 +14,7 @@
   <p>
     <img src="https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21" />
     <img src="https://img.shields.io/badge/Maven-project-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven project" />
-    <img src="https://img.shields.io/badge/Exercises-80-2F80ED?style=for-the-badge" alt="80 Java exercises" />
+    <img src="https://img.shields.io/badge/Exercises-97-2F80ED?style=for-the-badge" alt="97 Java exercises" />
     <img src="https://img.shields.io/badge/Status-active-27AE60?style=for-the-badge" alt="Active project" />
   </p>
 
