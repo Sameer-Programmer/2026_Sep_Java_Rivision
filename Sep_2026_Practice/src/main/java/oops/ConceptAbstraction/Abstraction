@@ -1,0 +1,21 @@
+ABSTRACT CLASS
+
+1. Declared using abstract keyword.
+
+2. Can have:
+   → Abstract methods
+   → Concrete methods
+   → Variables
+   → Constructors
+
+3. Cannot create an object directly.
+
+   Vehicle v = new Vehicle();  // ❌
+
+4. Child class must implement/override abstract methods.
+
+5. An abstract class can have constructors.
+
+6. Abstract class supports inheritance using extends.
+
+7. A class can extend only ONE class.
