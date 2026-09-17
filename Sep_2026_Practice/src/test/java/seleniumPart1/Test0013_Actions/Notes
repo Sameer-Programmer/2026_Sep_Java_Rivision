@@ -1,0 +1,23 @@
+// Actions class – Keyboard Actions
+
+Actions actions = new Actions(driver);
+
+// Press and hold ENTER key
+actions.keyDown(Keys.ENTER).perform();
+
+// Press and release ENTER key
+actions.keyDown(Keys.ENTER)
+       .keyUp(Keys.ENTER)
+       .perform();
+
+// Common keys
+Keys.ENTER
+Keys.TAB
+Keys.ESCAPE
+Keys.ARROW_DOWN
+Keys.ARROW_UP
+Keys.ARROW_LEFT
+Keys.ARROW_RIGHT
+Keys.SHIFT
+Keys.CONTROL
+Keys.ALT

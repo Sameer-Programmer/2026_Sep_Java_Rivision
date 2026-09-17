@@ -1,0 +1,28 @@
+==========================
+SELENIUM REVISION NOTES
+==========================
+
+1. JAVASCRIPT EXECUTOR
+----------------------
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+
+// Scroll down by 1500 pixels
+js.executeScript("window.scrollBy(0,1500)");
+
+// Scroll until element is visible
+js.executeScript("arguments[0].scrollIntoView()", element);
+
+// Click using JavaScript
+js.executeScript("arguments[0].click()", element);
+
+// Set value in textbox
+js.executeScript("arguments[0].setAttribute('value','Sameer')", element);
+
+When to Use:
+- Element not clickable.
+- sendKeys() not working.
+- Need to scroll to hidden element.
+- DOM manipulation required.
+
+=================================================

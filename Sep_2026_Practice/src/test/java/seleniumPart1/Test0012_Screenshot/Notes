@@ -1,0 +1,142 @@
+========================================
+SCREENSHOT HANDLING - REVISION NOTES
+========================================
+
+1. FULL BROWSER SCREENSHOT
+--------------------------
+
+TakesScreenshot ts = (TakesScreenshot) driver;
+
+File src = ts.getScreenshotAs(OutputType.FILE);
+
+File dest = new File("./Screenshots/HomePage.png");
+
+FileHandler.copy(src, dest);
+
+----------------------------------------
+
+Memory Trick:
+
+Cast Driver
+Capture Screenshot
+Copy Screenshot
+
+----------------------------------------
+
+Why Casting Required?
+
+WebDriver driver = new ChromeDriver();
+
+getScreenshotAs() belongs to TakesScreenshot Interface.
+
+So we must cast:
+
+(TakesScreenshot) driver
+
+========================================
+
+2. ELEMENT SCREENSHOT
+---------------------
+
+WebElement element =
+driver.findElement(By.id("name"));
+
+File src =
+element.getScreenshotAs(OutputType.FILE);
+
+File dest =
+new File("./Screenshots/NameField.png");
+
+FileHandler.copy(src, dest);
+
+----------------------------------------
+
+Memory Trick:
+
+Find Element
+Capture Screenshot
+Copy Screenshot
+
+----------------------------------------
+
+Why Casting NOT Required?
+
+WebElement already provides:
+
+getScreenshotAs()
+
+Therefore:
+
+No TakesScreenshot Interface
+No Casting Required
+
+========================================
+
+DIFFERENCE
+========================================
+
+FULL SCREENSHOT
+
+TakesScreenshot ts =
+(TakesScreenshot) driver;
+
+File src =
+ts.getScreenshotAs(OutputType.FILE);
+
+----------------------------------------
+
+ELEMENT SCREENSHOT
+
+WebElement element =
+driver.findElement(locator);
+
+File src =
+element.getScreenshotAs(OutputType.FILE);
+
+========================================
+
+INTERVIEW QUESTION
+========================================
+
+Q. Why do we cast WebDriver to
+TakesScreenshot?
+
+A.
+getScreenshotAs() method belongs to
+TakesScreenshot Interface.
+WebDriver reference does not directly
+expose this method, so casting is required.
+
+----------------------------------------
+
+Q. Is TakesScreenshot required for
+Element Screenshot?
+
+A.
+No.
+
+WebElement directly provides
+getScreenshotAs() method.
+
+Therefore no casting is required.
+
+========================================
+
+IMPORTANT IMPORTS
+========================================
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
+
+========================================
+
+GOLDEN RULE
+========================================
+
+Driver Screenshot
+→ TakesScreenshot Required
+
+Element Screenshot
+→ TakesScreenshot NOT Required
