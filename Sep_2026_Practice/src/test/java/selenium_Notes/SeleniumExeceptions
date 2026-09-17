@@ -1,0 +1,22 @@
+| Exception                            | When it occurs                                                                               |
+| ------------------------------------ | -------------------------------------------------------------------------------------------- |
+| **NoSuchElementException**           | Selenium cannot find the element in the DOM                                                  |
+| **StaleElementReferenceException**   | The element was found earlier, but the DOM/page changed and the reference is no longer valid |
+| **ElementNotInteractableException**  | Element exists but cannot be interacted with, e.g., hidden or disabled                       |
+| **ElementClickInterceptedException** | Another element is blocking the element you are trying to click                              |
+| **ElementNotVisibleException**       | Element is present but not visible *(older/deprecated Selenium exception)*                   |
+| **TimeoutException**                 | An explicit/fluent wait exceeds the specified timeout                                        |
+| **NoSuchFrameException**             | Selenium cannot find the specified frame/iframe                                              |
+| **NoSuchWindowException**            | Selenium cannot find the specified browser window/tab                                        |
+| **NoAlertPresentException**          | You try to interact with an alert when no alert is present                                   |
+| **InvalidSelectorException**         | XPath/CSS selector syntax is invalid                                                         |
+| **InvalidArgumentException**         | An invalid argument is passed to a WebDriver method                                          |
+| **WebDriverException**               | General/base exception for WebDriver-related problems                                        |
+| **SessionNotCreatedException**       | WebDriver cannot create a browser session, often due to browser/driver incompatibility       |
+| **NoSuchSessionException**           | You try to perform an operation after the WebDriver session has ended                        |
+| **JavascriptException**              | JavaScript execution fails                                                                   |
+| **MoveTargetOutOfBoundsException**   | Mouse action tries to move to a location outside the available browser viewport              |
+| **UnhandledAlertException**          | An unexpected alert is open while Selenium tries to perform another operation                |
+| **DetachedShadowRootException**      | The shadow root is no longer attached to the DOM                                             |
+| **InsecureCertificateException**     | Browser encounters an insecure/invalid SSL certificate                                       |
+| **UnableToSetCookieException**       | Selenium cannot set the requested cookie                                                     |
