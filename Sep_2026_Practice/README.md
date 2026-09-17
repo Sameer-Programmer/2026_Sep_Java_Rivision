@@ -62,6 +62,10 @@ flowchart LR
     E --> E2[WebDriver Methods]
     E --> E3[Waits & Navigation]
     E --> E4[Window Handles]
+    E --> E5[Frames & Alerts]
+    E --> E6[Dropdowns & Checkboxes]
+    E --> E7[JavaScript & Screenshots]
+    E --> E8[Actions]
 ```
 
 ## 📚 What is covered
@@ -88,7 +92,7 @@ The examples currently include **104 Java source files** plus supporting notes a
 | ⬆️ | `super` keyword | `oops.SuperkeyWord` | Parent constructors, methods, fields, and initialization behavior |
 | 🔐 | Access and final keywords | `oops.AccessModifiers`, `oops.finalKeyWord` | Access control and the use of `final` |
 | 🔌 | Interfaces | `oops.interfaceConcepts` | Interface notes, differences, and implementation examples |
-| 🧪 | Selenium practice | `seleniumPart1` | Locators, WebDriver methods, conditional methods, waits, navigation, and window handles using TestNG |
+| 🧪 | Selenium practice | `seleniumPart1` | Locators, WebDriver methods, conditional methods, waits, navigation, window handles, frames, alerts, dropdowns, checkboxes, JavaScript execution, screenshots, and Actions using TestNG |
 
 ## 🗂️ Project structure
 
@@ -127,7 +131,14 @@ Sep_2026_Practice/
         ├── Test003ConditionalMethods/
         ├── Test004Waits/
         ├── Test005NavigationMethods/
-        └── Test006WindowHandles/
+        ├── Test006WindowHandles/
+        ├── Test007Checbox/
+        ├── Test008Alerts/
+        ├── Test009Frames/
+        ├── Test0010Dropdowns/
+        ├── Test0011JavaScriptExecuter/
+        ├── Test0012_Screenshot/
+        └── Test0013_Actions/
 ```
 
 ## 🚀 Getting started
@@ -164,7 +175,7 @@ For examples that depend on other source files, compile the complete source tree
 
 ### 🧪 Run the Selenium practice tests
 
-The Selenium examples are located under `src/test/java/seleniumPart1` and use TestNG. Run them with:
+The Selenium examples are located under `src/test/java/seleniumPart1` and use TestNG. They now cover locators, WebDriver methods, conditional methods, waits, navigation, window handles, checkboxes, alerts, frames, dropdowns, JavaScript execution, screenshots, and user Actions. Run them with:
 
 ```bash
 cd Sep_2026_Practice
