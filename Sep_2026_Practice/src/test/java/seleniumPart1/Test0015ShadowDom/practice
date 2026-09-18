@@ -1,0 +1,39 @@
+
+        SearchContext root1  =   driver.findElement(By.cssSelector("shop-app")).getShadowRoot();
+		WebElement ironPages =  root1.findElement(By.cssSelector("iron-pages"));
+		  SearchContext root2 = ironPages.findElement(By.cssSelector("shop-list")).getShadowRoot();
+		SearchContext root3 = root2.findElement(By.cssSelector("a>shop-list-item")).getShadowRoot();
+		String price =  root3.findElement(By.cssSelector(".price")).getText();
+        System.out.println(price);
+
+
+        WebElement ironpages =  root1.findElement(By.cssSelector("iron-pages"));
+        WebElement shopList = ironpages.findElement(By.cssSelector("shop-list[name='list']"));
+       SearchContext root2 =  shopList.getShadowRoot();
+
+        WebElement ListItem= root2.findElement(By.cssSelector("a>shop-list-item"));
+        SearchContext root3 = ListItem.getShadowRoot();
+       String price =  root3.findElement(By.cssSelector(".price")).getText();
+        System.out.println(price);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        SearchContext root1 = driver.findElement(By.cssSelector("shop-app")).getShadowRoot();
+        SearchContext root2 = root1.findElement(By.cssSelector("shop-list")).getShadowRoot();
+        SearchContext root3 = root2.findElement(By.cssSelector("shop-list-item")).getShadowRoot();
+        WebElement price = root3.findElement(By.cssSelector(".price"));
+
+        System.out.println(price.getText());
+
+        driver.quit();

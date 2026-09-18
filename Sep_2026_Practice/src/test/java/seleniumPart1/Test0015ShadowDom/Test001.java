@@ -33,5 +33,23 @@ public class Test001 {
         System.out.println(price.getText());
 
         driver.quit();
+
+        /*
+
+        See Here He is attacking directly
+
+        SearchContext root1 = driver.findElement(By.cssSelector("shop-app")).getShadowRoot();
+        SearchContext root2 = root1.findElement(By.cssSelector("shop-list")).getShadowRoot();
+        SearchContext root3 = root2.findElement(By.cssSelector("shop-list-item")).getShadowRoot();
+        WebElement price = root3.findElement(By.cssSelector(".price"));
+
+        System.out.println(price.getText());
+
+        driver.quit();
+
+         */
+
+
+
     }
 }

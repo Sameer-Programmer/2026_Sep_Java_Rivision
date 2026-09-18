@@ -1,0 +1,12 @@
+   ChromeOptions options = new ChromeOptions();
+    --> Headless
+    ---> Incognite
+    ---> Badssl
+
+   WebDriver driver = new ChromeDriver(options);
+
+ChromeOptions
+-1) Launch Headless -->  options.addArguments("--headless=new")
+-2) BadSSl ->  options.setAcceptInsecureCerts(true);
+-3) incognito --> options.addArguments("--incognito");
+-4) To remove Chrome Runnning Notification -> options.setExperimentalOption("excludeSwitches" ,new String[]{"enable-automation"});

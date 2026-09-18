@@ -1,4 +1,4 @@
-package seleniumPart1.Test007Checbox;
+package seleniumPart1.Test007Checkbox;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

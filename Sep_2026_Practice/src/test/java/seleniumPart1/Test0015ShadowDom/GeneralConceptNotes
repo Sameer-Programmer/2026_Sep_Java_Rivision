@@ -1,0 +1,126 @@
+/*
+ * Shadow DOM Handling
+ *
+ * Where ever our Locator is present inside a particular
+ * Shadow DOM node, we need to capture that Shadow Root
+ * under SearchContext.
+ *
+ * If the element is a Shadow Host:
+ *
+ * WebElement  ->  getShadowRoot()  ->  SearchContext
+ *
+ * Then from that SearchContext we can find the child element.
+ *
+ *
+ * Example:
+ *
+ * shop-app
+ *    ↓
+ * Shadow Root -> root1
+ *    ↓
+ * shop-list
+ *    ↓
+ * Shadow Root -> root2
+ *    ↓
+ * shop-list-item
+ *    ↓
+ * Shadow Root -> root3
+ *    ↓
+ * price
+ *
+ *
+ * Main Pattern:
+ *
+ * WebElement element = driver.findElement(locator);
+ *
+ * SearchContext root = element.getShadowRoot();
+ *
+ * WebElement child = root.findElement(locator);
+ *
+ *
+ * If the child element is again a Shadow Host,
+ * then again use getShadowRoot().
+ */
+
+
+// 1. Locate the Shadow Host
+WebElement shopApp =
+        driver.findElement(By.cssSelector("shop-app"));
+
+
+// 2. Get Shadow Root
+SearchContext root1 =
+        shopApp.getShadowRoot();
+
+
+// 3. Find child element inside Shadow Root
+WebElement shopList =
+        root1.findElement(By.cssSelector("shop-list"));
+
+
+// 4. Get Shadow Root of shop-list
+SearchContext root2 =
+        shopList.getShadowRoot();
+
+
+// 5. Find child element inside root2
+WebElement shopListItem =
+        root2.findElement(By.cssSelector("shop-list-item"));
+
+
+// 6. Get Shadow Root of shop-list-item
+SearchContext root3 =
+        shopListItem.getShadowRoot();
+
+
+// 7. Find final element inside root3
+WebElement price =
+        root3.findElement(By.cssSelector(".price"));
+
+
+System.out.println(price.getText());
+
+
+
+/*
+ * Important:
+ *
+ * driver.findElement()
+ *      -> Finding element from main DOM
+ *
+ * root1.findElement()
+ *      -> Finding element inside root1
+ *
+ * root2.findElement()
+ *      -> Finding element inside root2
+ *
+ * root3.findElement()
+ *      -> Finding element inside root3
+ *
+ *
+ * getShadowRoot()
+ *      -> Used when the element is a Shadow Host
+ *
+ * findElement()
+ *      -> Used to find the element inside that
+ *         particular SearchContext
+ *
+ *
+ * Short Note:
+ *
+ * WebElement -> Shadow Host
+ *
+ * getShadowRoot()
+ *        ↓
+ *
+ * SearchContext
+ *        ↓
+ *
+ * findElement()
+ *        ↓
+ *
+ * WebElement
+ *
+ * If WebElement is again a Shadow Host,
+ * repeat the same process.
+ */

@@ -1,0 +1,63 @@
+/*
+ Shadow DOM Handling:
+
+ Where ever our Locator is present inside the Shadow DOM,
+ we can directly capture the Shadow Root in SearchContext.
+
+ If the element is a Shadow Host:
+
+ SearchContext root = driver.findElement(locator).getShadowRoot();
+
+ Then using that SearchContext, we can find the child element.
+
+ If the child element is again a Shadow Host,
+ again directly get the Shadow Root and store it in SearchContext.
+
+
+ Example:
+
+ SearchContext root1 =
+        driver.findElement(By.cssSelector("shop-app")).getShadowRoot();
+
+ SearchContext root2 =
+        root1.findElement(By.cssSelector("shop-list")).getShadowRoot();
+
+ SearchContext root3 =
+        root2.findElement(By.cssSelector("shop-list-item")).getShadowRoot();
+
+ WebElement price =
+        root3.findElement(By.cssSelector(".price"));
+
+
+ Here:
+
+ root1 -> Shadow Root of shop-app
+ root2 -> Shadow Root of shop-list
+ root3 -> Shadow Root of shop-list-item
+
+ Finally price is the WebElement present inside root3.
+
+
+ Important:
+
+ If we want to find an element inside Shadow Root,
+ use SearchContext.
+
+ If the element is again a Shadow Host,
+ use getShadowRoot() again.
+*/
+
+
+SearchContext root1 =
+        driver.findElement(By.cssSelector("shop-app")).getShadowRoot();
+
+SearchContext root2 =
+        root1.findElement(By.cssSelector("shop-list")).getShadowRoot();
+
+SearchContext root3 =
+        root2.findElement(By.cssSelector("shop-list-item")).getShadowRoot();
+
+WebElement price =
+        root3.findElement(By.cssSelector(".price"));
+
+System.out.println(price.getText());

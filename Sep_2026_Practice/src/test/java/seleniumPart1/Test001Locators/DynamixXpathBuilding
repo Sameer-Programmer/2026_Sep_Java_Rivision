@@ -1,0 +1,13 @@
+    String targetValue = "29";
+        WebElement targetElement
+                = driver.findElement(By.xpath("//a[contains(normalize-space(),'"+targetValue+"')]"));
+
+                Note For Strings we need single quotes
+           Example = '"+targetValue+"')
+
+           but for number no need of single quotes
+                 Example = "+targetValue+")
+
+
+        int indexofAuther = 0;
+  String authname   = driver.findElement(By.xpath("//table[@name='BookTable']//tr["+i+"]//td["+indexofAuther+"]")).getText();
