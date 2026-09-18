@@ -1,0 +1,106 @@
+// ================= CONFIG.PROPERTIES =================
+
+// Properties:
+// Properties is a Java class used to store and read
+// data in Key-Value format.
+
+// Example config.properties:
+//
+// browser=chrome
+// url=https://google.com
+// username=admin
+// password=admin123
+
+
+// Syntax:
+
+Properties properties = new Properties();
+
+
+// Properties object is initially empty.
+// It will store the data from config.properties file.
+
+
+
+// ================= FileInputStream (FIS) =================
+
+// FileInputStream is used to READ data from a file.
+
+// It belongs to:
+// java.io.FileInputStream
+
+String projectpath = System.getProperty("user.dir");
+
+String filepath1 = projectpath + "//Documents//config.properties";
+
+FileInputStream fis = new FileInputStream(filepath1);
+
+
+// FileInputStream:
+// 1. Takes the file path
+// 2. Opens the file
+// 3. Reads the data from the file
+
+
+
+// ================= load() =================
+
+// load() is used to load the data from the FileInputStream
+// into the Properties object.
+
+properties.load(fis);
+
+
+// After loading, Properties object contains:
+//
+// browser = chrome
+// url = https://google.com
+// username = admin
+// password = admin123
+
+
+
+// ================= getProperty() =================
+
+// getProperty() is used to get a particular value
+// using the key.
+
+String browser = properties.getProperty("browser");
+
+
+// browser --> Key
+// chrome  --> Value
+//
+// browser = chrome
+
+
+// ================= COMPLETE FLOW =================
+
+// config.properties
+//        ↓
+// FileInputStream
+//        ↓
+// Reads the file
+//        ↓
+// properties.load(fis)
+//        ↓
+// Properties object
+//        ↓
+// getProperty("browser")
+//        ↓
+// chrome
+
+
+// ================= EASY TO REMEMBER =================
+
+// Properties
+// --> Stores Key-Value data
+//
+// FileInputStream
+// --> Reads data from the file
+//
+// load()
+// --> Loads file data into Properties
+//
+// getProperty()
+// --> Gets value using Key

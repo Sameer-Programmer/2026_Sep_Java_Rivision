@@ -1,4 +1,4 @@
-package seleniumPart1.Test0014FileUpload;
+package seleniumPart1.Test0014FileUpload_FileCheck;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
