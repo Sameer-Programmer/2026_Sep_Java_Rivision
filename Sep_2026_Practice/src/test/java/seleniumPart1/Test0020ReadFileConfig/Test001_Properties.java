@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
-public class Test001 {
+public class Test001_Properties {
     public static void main(String[] args) throws IOException {
         Properties properties = new Properties();
         String projectpath = System.getProperty("user.dir");

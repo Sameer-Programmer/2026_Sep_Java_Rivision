@@ -1,0 +1,48 @@
+STEP 1 → Add Maven Dependency
+
+Apache POI dependency:
+
+<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi-ooxml</artifactId>
+    <version>5.4.1</version>
+</dependency>
+
+
+STEP 2 → Provide the Excel File Path
+
+Example:
+
+String filepath1 = System.getProperty("user.dir")
+        + "\\TestData\\TestData.xlsx";
+
+
+STEP 3 → FileInputStream
+
+FileInputStream fis = new FileInputStream(filepath1);
+
+→ FileInputStream loads/opens the Excel file as a stream
+  so that Java can read its contents.
+
+
+STEP 4 → Create Workbook → Sheet → Row → Cell
+
+Workbook:
+XSSFWorkbook workbook = new XSSFWorkbook(fis);
+
+Sheet:
+XSSFSheet sheet = workbook.getSheet("Sheet1");
+
+Row:
+sheet.getRow(rowIndex);
+
+Cell:
+sheet.getRow(rowIndex).getCell(columnIndex);
+
+Interview memory trick:
+
+getLastRowNum() → last index
+getLastCellNum() → count
+
+So getLastRowNum() → last index >>>>>>>>--Rows -- 5
+getLastCellNum() → count ==>->>>>>>>>>>>>Columns -4
