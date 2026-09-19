@@ -74,11 +74,12 @@ flowchart LR
     E --> E14[Properties & Excel]
     E --> E15[Broken Links]
     E --> E16[PDF Download & Validation]
+    E --> E17[Cookies]
 ```
 
 ## 📚 What is covered
 
-The examples currently include **104 Java source files** and **44 test Java files**, plus supporting notes, study documents, demo pages, configuration, and test data across the following areas:
+The examples currently include **104 Java source files** and **48 test Java files**, plus supporting notes, study documents, demo pages, configuration, and test data across the following areas:
 
 | Icon | Area | Package(s) | Focus |
 | :---: | --- | --- | --- |
@@ -100,7 +101,7 @@ The examples currently include **104 Java source files** and **44 test Java file
 | ⬆️ | `super` keyword | `oops.SuperkeyWord` | Parent constructors, methods, fields, and initialization behavior |
 | 🔐 | Access and final keywords | `oops.AccessModifiers`, `oops.finalKeyWord` | Access control and the use of `final` |
 | 🔌 | Interfaces | `oops.interfaceConcepts` | Interface notes, differences, and implementation examples |
-| 🧪 | Selenium practice | `seleniumPart1` | Locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, frames, alerts, dropdowns, checkboxes, JavaScript execution, screenshots, Actions, file upload and existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, and PDF download validation using TestNG |
+| 🧪 | Selenium practice | `seleniumPart1` | Locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, frames, alerts, dropdowns, checkboxes, JavaScript execution, screenshots, Actions, file upload and existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, PDF download and content validation, and Cookies using TestNG |
 | 📄 | Revision documents | `Documents`, `selenium_Notes` | Array and string reference notes, Selenium exception-handling notes, properties-file notes, Excel-reading notes, and PDF download-validation steps |
 | 🧪 | Supporting practice | `Workouts` | Additional focused TestNG exercises and workout examples |
 
@@ -121,6 +122,7 @@ Sep_2026_Practice/
 │   └── PurchaseReport.pdf
 ├── Downloads/
 │   └── PurchaseReport.pdf
+├── PurchaseReport.pdf
 ├── src/main/java/
 │   ├── foundation/
 │   │   ├── Arrays_Concept/
@@ -168,7 +170,8 @@ Sep_2026_Practice/
     │   ├── Test0019Pagination/
     │   ├── Test0020ReadFileConfig/
     │   ├── Test0021BrokenLinks/
-    │   └── Test0021PDFValidation/
+    │   ├── Test0021PDFValidation/
+    │   └── Test0022Cookies/
     ├── selenium_Notes/
     │   └── SeleniumExeceptions
     └── Workouts/
@@ -183,6 +186,7 @@ Sep_2026_Practice/
 - IntelliJ IDEA, Eclipse, or Visual Studio Code with Java support
 - Apache POI is included for Excel test-data reading
 - Apache PDFBox is included for PDF creation and validation
+- Log4j is included for PDF validation logging support
 
 ### ⚙️ Compile with Maven
 
@@ -210,7 +214,7 @@ For examples that depend on other source files, compile the complete source tree
 
 ### 🧪 Run the Selenium practice tests
 
-The Selenium examples are located under `src/test/java/seleniumPart1` and use TestNG. They now cover locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, checkboxes, alerts, frames, dropdowns, JavaScript execution, screenshots, user Actions, file upload and file-existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, and broken-link checks, plus PDF download validation using a local demo page and downloaded report. Run them with:
+The Selenium examples are located under `src/test/java/seleniumPart1` and use TestNG. They now cover locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, checkboxes, alerts, frames, dropdowns, JavaScript execution, screenshots, user Actions, file upload and file-existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, PDF download and content validation using a local demo page and downloaded report, and browser Cookies. Run them with:
 
 ```bash
 cd Sep_2026_Practice
@@ -227,7 +231,7 @@ Browser-launching examples may need a locally installed browser, matching driver
 4. **Practice strings and collections** — indexing, mutability, equality, frequency counting, and duplicate handling.
 5. **Build the OOP foundation** — classes, objects, constructors, encapsulation, access modifiers, and `final`.
 6. **Complete the OOP path** — inheritance, abstraction, interfaces, overloading, overriding, and `super`.
-7. **Explore Selenium practice** — locators, browser actions, waits, navigation, file handling, Shadow DOM, Chrome options, date pickers, web tables, pagination, configuration files, Excel data, broken-link checks, and PDF download validation.
+7. **Explore Selenium practice** — locators, browser actions, waits, navigation, file handling, Shadow DOM, Chrome options, date pickers, web tables, pagination, configuration files, Excel data, broken-link checks, PDF download validation, and Cookies.
 8. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
 
 ## 💡 Practice approach
