@@ -1,0 +1,169 @@
+========================================
+PDF VALIDATION USING APACHE PDFBOX
+========================================
+
+1. LOAD THE PDF
+----------------
+
+PDDocument document = Loader.loadPDF(pdfFile);
+
+PDDocument
+    → Class from Apache PDFBox
+
+document
+    → Reference variable
+
+Loader
+    → Class
+
+loadPDF()
+    → Static method
+
+pdfFile
+    → File object representing the PDF
+
+Meaning:
+→ Opens/loads the PDF file using PDFBox.
+→ Returns a PDDocument object representing the opened PDF.
+
+
+2. GET NUMBER OF PAGES
+-----------------------
+
+int pages = document.getNumberOfPages();
+
+getNumberOfPages()
+    → Returns the total number of pages in the PDF.
+
+Example:
+If PDF contains 2 pages:
+
+pages = 2
+
+
+3. VALIDATE THAT PDF CONTAINS PAGES
+------------------------------------
+
+Assert.assertTrue(
+        pages > 0,
+        "Pdf file not contains Pages "
+);
+
+Meaning:
+→ The PDF must contain at least one page.
+
+pages > 0
+    → Expected condition
+
+If pages = 0
+    → Test fails
+
+If pages = 1, 2, 3...
+    → Test passes
+
+
+4. CREATE PDF TEXT STRIPPER
+----------------------------
+
+PDFTextStripper pdfTextStripper = new PDFTextStripper();
+
+PDFTextStripper
+    → Class from Apache PDFBox
+
+pdfTextStripper
+    → Reference variable
+
+new PDFTextStripper()
+    → Creates a PDFTextStripper object
+
+Purpose:
+→ Used to extract/read text from the PDF.
+
+
+5. EXTRACT TEXT FROM PDF
+-------------------------
+
+String pdfText = pdfTextStripper.getText(document);
+
+getText(document)
+    → Extracts all readable text from the PDF.
+
+document
+    → The PDF that was loaded earlier.
+
+pdfText
+    → String containing the extracted PDF text.
+
+
+6. VALIDATE PDF CONTENT
+-----------------------
+
+Assert.assertTrue(
+        pdfText.contains("Purchase Report"),
+        "Purchase Report title not found"
+);
+
+contains("Purchase Report")
+    → Checks whether the extracted PDF text contains
+      "Purchase Report".
+
+If found:
+    → Test passes
+
+If not found:
+    → Test fails with:
+      "Purchase Report title not found"
+
+
+========================================
+COMPLETE FLOW
+========================================
+
+PDF File
+   ↓
+Loader.loadPDF(pdfFile)
+   ↓
+PDDocument
+   ↓
+getNumberOfPages()
+   ↓
+Validate pages > 0
+   ↓
+PDFTextStripper
+   ↓
+getText(document)
+   ↓
+String pdfText
+   ↓
+contains("Purchase Report")
+   ↓
+PDF content validated
+
+
+IMPORTANT CLASSES
+-----------------
+
+Loader
+→ Class used to load/open the PDF.
+
+PDDocument
+→ Class representing the loaded PDF document.
+
+PDFTextStripper
+→ Class used to extract text from the PDF.
+
+
+IMPORTANT METHODS
+-----------------
+
+Loader.loadPDF(pdfFile)
+→ Loads the PDF.
+
+document.getNumberOfPages()
+→ Gets number of pages.
+
+pdfTextStripper.getText(document)
+→ Extracts text from PDF.
+
+pdfText.contains("Purchase Report")
+→ Checks whether specific text exists.

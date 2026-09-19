@@ -1,0 +1,17 @@
+// Cookies are stored as key-value pairs.
+
+// We can capture all cookies in a Set because each cookie is unique
+// based on its cookie identity.
+
+Set<Cookie> cookieSet = driver.manage().getCookies();
+// Gets all cookies
+
+// Add a new cookie
+Cookie cookie = new Cookie("SameerCookie", "Value");
+driver.manage().addCookie(cookie);
+
+// Delete a specific cookie by its name
+driver.manage().deleteCookieNamed("OCSESSID");
+
+// Delete all cookies
+driver.manage().deleteAllCookies();
