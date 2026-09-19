@@ -75,11 +75,13 @@ flowchart LR
     E --> E15[Broken Links]
     E --> E16[PDF Download & Validation]
     E --> E17[Cookies]
+    E --> E18[TestNG Fundamentals]
+    E --> E19[TestNG Groups & Suites]
 ```
 
 ## 📚 What is covered
 
-The examples currently include **104 Java source files** and **48 test Java files**, plus supporting notes, study documents, demo pages, configuration, and test data across the following areas:
+The examples currently include **104 Java source files** and **54 test Java files**, plus supporting notes, study documents, demo pages, configuration, and test data across the following areas:
 
 | Icon | Area | Package(s) | Focus |
 | :---: | --- | --- | --- |
@@ -102,6 +104,7 @@ The examples currently include **104 Java source files** and **48 test Java file
 | 🔐 | Access and final keywords | `oops.AccessModifiers`, `oops.finalKeyWord` | Access control and the use of `final` |
 | 🔌 | Interfaces | `oops.interfaceConcepts` | Interface notes, differences, and implementation examples |
 | 🧪 | Selenium practice | `seleniumPart1` | Locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, frames, alerts, dropdowns, checkboxes, JavaScript execution, screenshots, Actions, file upload and existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, PDF download and content validation, and Cookies using TestNG |
+| 🧪 | TestNG practice | `TestNgFolder` | TestNG defaults, priorities, soft and hard assertions, dependencies, multiple tests in one session, groups, include/exclude configuration, and XML suite execution |
 | 📄 | Revision documents | `Documents`, `selenium_Notes` | Array and string reference notes, Selenium exception-handling notes, properties-file notes, Excel-reading notes, and PDF download-validation steps |
 | 🧪 | Supporting practice | `Workouts` | Additional focused TestNG exercises and workout examples |
 
@@ -148,6 +151,9 @@ Sep_2026_Practice/
 │       ├── finalKeyWord/
 │       └── interfaceConcepts/
 └── src/test/java/
+    ├── TestNgFolder/
+    │   ├── Test001Basics/
+    │   └── Test002Groups/
     ├── seleniumPart1/
     │   ├── Test001Locators/
     │   ├── Test002WebDriverMethods/
@@ -187,6 +193,7 @@ Sep_2026_Practice/
 - Apache POI is included for Excel test-data reading
 - Apache PDFBox is included for PDF creation and validation
 - Log4j is included for PDF validation logging support
+- TestNG is used for assertions, dependencies, groups, and XML suite execution
 
 ### ⚙️ Compile with Maven
 
@@ -214,7 +221,7 @@ For examples that depend on other source files, compile the complete source tree
 
 ### 🧪 Run the Selenium practice tests
 
-The Selenium examples are located under `src/test/java/seleniumPart1` and use TestNG. They now cover locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, checkboxes, alerts, frames, dropdowns, JavaScript execution, screenshots, user Actions, file upload and file-existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, PDF download and content validation using a local demo page and downloaded report, and browser Cookies. Run them with:
+The Selenium examples are located under `src/test/java/seleniumPart1` and use TestNG. They now cover locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, checkboxes, alerts, frames, dropdowns, JavaScript execution, screenshots, user Actions, file upload and file-existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, PDF download and content validation using a local demo page and downloaded report, and browser Cookies. TestNG fundamentals and suite examples are organized separately under `src/test/java/TestNgFolder`. Run them with:
 
 ```bash
 cd Sep_2026_Practice
@@ -232,7 +239,8 @@ Browser-launching examples may need a locally installed browser, matching driver
 5. **Build the OOP foundation** — classes, objects, constructors, encapsulation, access modifiers, and `final`.
 6. **Complete the OOP path** — inheritance, abstraction, interfaces, overloading, overriding, and `super`.
 7. **Explore Selenium practice** — locators, browser actions, waits, navigation, file handling, Shadow DOM, Chrome options, date pickers, web tables, pagination, configuration files, Excel data, broken-link checks, PDF download validation, and Cookies.
-8. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
+8. **Learn TestNG execution** — defaults, priorities, assertions, dependencies, groups, shared sessions, and XML suite configuration.
+9. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
 
 ## 💡 Practice approach
 
