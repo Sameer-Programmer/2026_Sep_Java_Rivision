@@ -1,0 +1,59 @@
+========================================
+             TESTNG - DATAPROVIDER
+========================================
+
+DataProvider is a method in TestNG.
+
+It is used to pass multiple sets of test data to a test method.
+
+Rules to Follow and Remember:
+
+1. A DataProvider method is denoted by @DataProvider annotation.
+
+2. A DataProvider method must return test data.
+   Therefore, we need to use the return statement.
+
+3. Generally, we use a 2-dimensional array because we
+   usually pass multiple values for each test.
+
+   Example:
+   username + password
+
+   Therefore, we commonly use:
+
+   Object[][]
+
+----------------------------------------
+SYNTAX:
+----------------------------------------
+
+@DataProvider(name = "Dp1")
+public Object[][] dataProviderMethod1() {
+
+    Object[][] data = {
+        {"username1", "password1"},
+        {"username2", "password2"},
+        {"username3", "password3"}
+    };
+
+    return data;
+}
+
+----------------------------------------
+HOW IT WORKS:
+----------------------------------------
+
+Each row represents ONE set of test data.
+
+Row 1 → username1, password1
+Row 2 → username2, password2
+Row 3 → username3, password3
+
+So TestNG will execute the test method 3 times.
+
+========================================
+
+@Test(dataProvider="DP1")
+public void m1(String email,String password){
+
+}
