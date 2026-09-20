@@ -44,6 +44,7 @@ flowchart LR
     B --> B2[Type Casting]
     B --> B3[Switch Case]
     B --> B4[Wrapper Classes]
+    B --> B5[Two-Dimensional Arrays]
 
     C --> C1[🔢 Maths]
     C --> C2[🔡 Arrays]
@@ -77,15 +78,19 @@ flowchart LR
     E --> E17[Cookies]
     E --> E18[TestNG Fundamentals]
     E --> E19[TestNG Groups & Suites]
+    E --> E20[TestNG Annotations & XML]
+    E --> E21[DataProviders & Parameters]
+    E --> E22[Listeners & Reports]
 ```
 
 ## 📚 What is covered
 
-The examples currently include **104 Java source files** and **54 test Java files**, plus supporting notes, study documents, demo pages, configuration, and test data across the following areas:
+The examples currently include **105 Java source files** and **63 test Java files**, plus supporting notes, study documents, demo pages, reports, configuration, and test data across the following areas:
 
 | Icon | Area | Package(s) | Focus |
 | :---: | --- | --- | --- |
 | 🧱 | Java foundations | `foundation.Maths_Problems`, `foundation.SwitchCase_Example`, `foundation.TypeCating_Example` | Variables, scope, type casting, `switch`, prime numbers, Fibonacci, factorial, Armstrong numbers, GCD, perfect numbers, powers, leap years, and number manipulation |
+| 🧱 | Two-dimensional arrays | `foundation.TwoDimensionalArray` | Two-dimensional array declarations, traversal, and practice examples |
 | 📦 | Array concepts | `foundation.Arrays_Concept` | Array declarations, traversal, and arrays of objects |
 | 🔁 | Array problems | `foundation.Arrays_Problems` | Searching, copying, sorting, rotations, two-sum, missing values, duplicates, non-repeated values, maximum sums, averages, products, and even/odd separation |
 | 🧺 | Collections concepts | `foundation.Collections_Concept` | `ArrayList`, `HashSet`, and `HashMap` basics |
@@ -104,7 +109,7 @@ The examples currently include **104 Java source files** and **54 test Java file
 | 🔐 | Access and final keywords | `oops.AccessModifiers`, `oops.finalKeyWord` | Access control and the use of `final` |
 | 🔌 | Interfaces | `oops.interfaceConcepts` | Interface notes, differences, and implementation examples |
 | 🧪 | Selenium practice | `seleniumPart1` | Locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, frames, alerts, dropdowns, checkboxes, JavaScript execution, screenshots, Actions, file upload and existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, PDF download and content validation, and Cookies using TestNG |
-| 🧪 | TestNG practice | `TestNgFolder` | TestNG defaults, priorities, soft and hard assertions, dependencies, multiple tests in one session, groups, include/exclude configuration, and XML suite execution |
+| 🧪 | TestNG practice | `TestNgFolder` | TestNG defaults, annotations, priorities, soft and hard assertions, dependencies, multiple tests in one session, groups, include/exclude configuration, XML structure, DataProviders, parameters, Excel utilities, listeners, and report generation |
 | 📄 | Revision documents | `Documents`, `selenium_Notes` | Array and string reference notes, Selenium exception-handling notes, properties-file notes, Excel-reading notes, and PDF download-validation steps |
 | 🧪 | Supporting practice | `Workouts` | Additional focused TestNG exercises and workout examples |
 
@@ -120,6 +125,8 @@ Sep_2026_Practice/
 │   └── config.properties
 ├── TestData/
 │   └── TestData.xlsx
+├── reports/
+│   └── myReport.html
 ├── DemoWebPages/
 │   ├── index.html
 │   └── PurchaseReport.pdf
@@ -137,6 +144,7 @@ Sep_2026_Practice/
 │   │   ├── Strings/
 │   │   ├── SwitchCase_Example/
 │   │   ├── TypeCating_Example/
+│   │   ├── TwoDimensionalArray/
 │   │   ├── Warmup/
 │   │   └── conceptExeception/
 │   └── oops/
@@ -153,7 +161,13 @@ Sep_2026_Practice/
 └── src/test/java/
     ├── TestNgFolder/
     │   ├── Test001Basics/
-    │   └── Test002Groups/
+    │   ├── Test002Annotations/
+    │   ├── Test003XMLFileStructure/
+    │   ├── Test004Groups/
+    │   ├── Test005DataProvider/
+    │   ├── Test005Excel/
+    │   ├── Test006Parameters/
+    │   └── Test007ListnersAndReportgeneration/
     ├── seleniumPart1/
     │   ├── Test001Locators/
     │   ├── Test002WebDriverMethods/
@@ -194,6 +208,7 @@ Sep_2026_Practice/
 - Apache PDFBox is included for PDF creation and validation
 - Log4j is included for PDF validation logging support
 - TestNG is used for assertions, dependencies, groups, and XML suite execution
+- ExtentReports is included for HTML report generation
 
 ### ⚙️ Compile with Maven
 
@@ -239,8 +254,9 @@ Browser-launching examples may need a locally installed browser, matching driver
 5. **Build the OOP foundation** — classes, objects, constructors, encapsulation, access modifiers, and `final`.
 6. **Complete the OOP path** — inheritance, abstraction, interfaces, overloading, overriding, and `super`.
 7. **Explore Selenium practice** — locators, browser actions, waits, navigation, file handling, Shadow DOM, Chrome options, date pickers, web tables, pagination, configuration files, Excel data, broken-link checks, PDF download validation, and Cookies.
-8. **Learn TestNG execution** — defaults, priorities, assertions, dependencies, groups, shared sessions, and XML suite configuration.
-9. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
+8. **Learn TestNG execution** — annotations, defaults, priorities, assertions, dependencies, groups, shared sessions, XML suites, DataProviders, parameters, listeners, and reports.
+9. **Extend core Java practice** — two-dimensional arrays and structured data traversal.
+10. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
 
 ## 💡 Practice approach
 
