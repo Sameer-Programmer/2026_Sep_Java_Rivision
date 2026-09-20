@@ -1,4 +1,4 @@
-package TestNgFolder.Test005Parameters;
+package TestNgFolder.Test006Parameters;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

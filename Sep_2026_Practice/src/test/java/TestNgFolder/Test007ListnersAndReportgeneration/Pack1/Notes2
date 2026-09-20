@@ -1,0 +1,30 @@
+IMPLEMENTATION PART of Extent Report ->Listners
+---------------------
+Step 1 -Add the Maven Dependency in POM
+
+<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.1.2</version>
+</dependency>
+
+Step 2 - Create a Class Test001_ExtentReportManager implements ITestListene for Generate Reports
+Sep 3 - Step 2 - Create a Class Test002_MyListners implements ITestListene  for to listen the events this is for default
+
+step 4 - create the xml file with Report Listers and test case  or both
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+
+        <listener class-name="TestNgFolder.Test007ListnersAndReportgeneration.Test001_ExtentReportManager"></listener>
+
+    </listeners>
+    <test name = "Test">
+        <classes>
+            <class name="TestNgFolder.Test007ListnersAndReportgeneration.Test003"/>
+        </classes>
+    </test>
+</suite>

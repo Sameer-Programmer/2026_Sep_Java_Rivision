@@ -1,0 +1,24 @@
+<suite>
+│
+├── <listeners>
+│
+├── <parameter>
+│
+├── <test>
+│   │
+│   ├── <parameter>
+│   │
+│   ├── <groups>
+│   │   │
+│   │   └── <run>
+│   │       ├── <include>
+│   │       └── <exclude>
+│   │
+│   └── <classes>
+│       │
+│       └── <class>
+│           └── <methods> (Optional)
+│               ├── <include>
+│               └── <exclude>
+│
+</suite>

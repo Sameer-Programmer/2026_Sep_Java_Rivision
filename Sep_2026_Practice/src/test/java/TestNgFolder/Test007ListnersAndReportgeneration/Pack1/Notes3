@@ -1,0 +1,14 @@
+Extent Report
+-----
+1) ExtentSparkReporter --- Responsible for UI of the report
+2) ExtentReport ---------populating common information in the Report
+(browser name, projectName--common Information)
+3) ExtentTest ----- Creating Test case entries in the report
+
+
+Dynamic
+Report- name with TimeStamp
+extent.setSystemInfo -- dynamic no HardCodee
+OnTest Failure - Screenshort
+We shold display the class Name - test case ID
+Sharing Report in Email

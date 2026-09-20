@@ -1,0 +1,71 @@
+=========================
+TestNG Listener - Notes-Theory
+=========================
+
+Listener
+--------
+A Listener is a TestNG feature that listens to test execution events
+ and performs actions automatically.
+
+Why do we use Listener?
+-----------------------
+- Capture screenshots on failure.
+- Update Extent Reports.
+- Log test execution.
+- Avoid writing the same code in every test case.
+
+Implementation
+--------------
+1. Create a class.
+2. Implement the ITestListener interface.
+3. Override the required methods.
+
+Example:
+public class MyListener implements ITestListener
+
+Common Methods
+--------------
+onStart()          -> Executes before the test suite starts.
+onTestStart()      -> Executes before each test starts.
+onTestSuccess()    -> Executes when a test passes.
+onTestFailure()    -> Executes when a test fails.
+onTestSkipped()    -> Executes when a test is skipped.
+onFinish()         -> Executes after all tests complete.
+
+How to Register Listener?
+-------------------------
+1. Using @Listeners annotation.
+2. Using testng.xml (Recommended in Frameworks).
+
+Interview Definition
+--------------------
+A Listener is a TestNG interface that listens to test execution events
+and automatically performs actions such as capturing screenshots,
+ logging test results, and updating Extent Reports.
+
+
+TestNG Listners
+--
+Add the Maven Dependency
+1) Create Test case
+2) Create a Listener class
+3) Create a XML file and include both Testcase and Listener Class
+
+2) Ways to implement listener class
+
+Method1
+---------------
+
+class MyListner implements ITestListner {
+// Interface
+}
+
+class MyListner extends TestListnerAdapter {
+// From class
+}
+
+
+From testng .xml file we can fire the Listener class or
+Directly add a Line in the cclass if you run the class Directly
+
+@Listeners(Selenium_Java_TestNG_Part4.MyListener.class)

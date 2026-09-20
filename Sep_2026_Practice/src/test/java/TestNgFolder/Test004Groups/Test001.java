@@ -1,4 +1,4 @@
-package TestNgFolder.Test002Groups;
+package TestNgFolder.Test004Groups;
 import org.testng.annotations.Test;
 public class Test001 {
     @Test (groups = {"sanity"})

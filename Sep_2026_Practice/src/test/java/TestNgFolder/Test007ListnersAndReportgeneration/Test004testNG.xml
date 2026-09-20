@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+
+        <listener class-name="TestNgFolder.Test007ListnersAndReportgeneration.Test001_ExtentReportManager"></listener>
+        <!-- This below Line of code to generate default html reports >
+        <!--<listener class-name="TestNgFolder.Test007ListnersAndReportgeneration.Test002_MyListner"></listener>-->
+
+    </listeners>
+    <test name = "Test">
+        <classes>
+            <class name="TestNgFolder.Test007ListnersAndReportgeneration.Test003"/>
+        </classes>
+    </test>
+</suite>
