@@ -81,11 +81,12 @@ flowchart LR
     E --> E20[TestNG Annotations & XML]
     E --> E21[DataProviders & Parameters]
     E --> E22[Listeners & Reports]
+    E --> E23[ThreadLocal & Parallel Tests]
 ```
 
 ## 📚 What is covered
 
-The examples currently include **105 Java source files** and **63 test Java files**, plus supporting notes, study documents, demo pages, reports, configuration, and test data across the following areas:
+The examples currently include **105 Java source files** and **65 test Java files**, plus supporting notes, study documents, demo pages, reports, configuration, and test data across the following areas:
 
 | Icon | Area | Package(s) | Focus |
 | :---: | --- | --- | --- |
@@ -109,7 +110,7 @@ The examples currently include **105 Java source files** and **63 test Java file
 | 🔐 | Access and final keywords | `oops.AccessModifiers`, `oops.finalKeyWord` | Access control and the use of `final` |
 | 🔌 | Interfaces | `oops.interfaceConcepts` | Interface notes, differences, and implementation examples |
 | 🧪 | Selenium practice | `seleniumPart1` | Locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, frames, alerts, dropdowns, checkboxes, JavaScript execution, screenshots, Actions, file upload and existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, PDF download and content validation, and Cookies using TestNG |
-| 🧪 | TestNG practice | `TestNgFolder` | TestNG defaults, annotations, priorities, soft and hard assertions, dependencies, multiple tests in one session, groups, include/exclude configuration, XML structure, DataProviders, parameters, Excel utilities, listeners, and report generation |
+| 🧪 | TestNG practice | `TestNgFolder`, `ThreadLocalConcept` | TestNG defaults, annotations, priorities, soft and hard assertions, dependencies, multiple tests in one session, groups, include/exclude configuration, XML structure, DataProviders, parameters, Excel utilities, listeners, report generation, parallel methods, thread IDs, and `ThreadLocal<WebDriver>` driver isolation |
 | 📄 | Revision documents | `Documents`, `selenium_Notes` | Array and string reference notes, Selenium exception-handling notes, properties-file notes, Excel-reading notes, and PDF download-validation steps |
 | 🧪 | Supporting practice | `Workouts` | Additional focused TestNG exercises and workout examples |
 
@@ -168,6 +169,7 @@ Sep_2026_Practice/
     │   ├── Test005Excel/
     │   ├── Test006Parameters/
     │   └── Test007ListnersAndReportgeneration/
+    ├── ThreadLocalConcept/
     ├── seleniumPart1/
     │   ├── Test001Locators/
     │   ├── Test002WebDriverMethods/
@@ -254,7 +256,7 @@ Browser-launching examples may need a locally installed browser, matching driver
 5. **Build the OOP foundation** — classes, objects, constructors, encapsulation, access modifiers, and `final`.
 6. **Complete the OOP path** — inheritance, abstraction, interfaces, overloading, overriding, and `super`.
 7. **Explore Selenium practice** — locators, browser actions, waits, navigation, file handling, Shadow DOM, Chrome options, date pickers, web tables, pagination, configuration files, Excel data, broken-link checks, PDF download validation, and Cookies.
-8. **Learn TestNG execution** — annotations, defaults, priorities, assertions, dependencies, groups, shared sessions, XML suites, DataProviders, parameters, listeners, and reports.
+8. **Learn TestNG execution** — annotations, defaults, priorities, assertions, dependencies, groups, shared sessions, XML suites, DataProviders, parameters, listeners, reports, and parallel execution with `ThreadLocal<WebDriver>`.
 9. **Extend core Java practice** — two-dimensional arrays and structured data traversal.
 10. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
 
