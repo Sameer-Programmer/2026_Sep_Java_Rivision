@@ -7,9 +7,9 @@ import org.testng.annotations.Test;
 
 public class Test002 {
 
-    WebDriver driver;
-    private  static ThreadLocal<WebDriver>tdiver = new ThreadLocal<>();
 
+
+    private  static ThreadLocal<WebDriver>tdiver = new ThreadLocal<>();
     public void setDriver(WebDriver driver){
         tdiver.set(driver);
     }
@@ -17,6 +17,8 @@ public class Test002 {
     public WebDriver getDriver(){
         return tdiver.get();
     }
+
+    WebDriver driver;
 
     @Test
     public void  m1(){

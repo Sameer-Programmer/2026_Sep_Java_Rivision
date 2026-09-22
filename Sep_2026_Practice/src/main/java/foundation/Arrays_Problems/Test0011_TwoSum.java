@@ -9,7 +9,7 @@ public class Test0011_TwoSum {
             for(int j=i+1; j< arr.length;j++){
               if(arr[i] + arr[j] == target)  {
                   System.out.println(arr[i]+"  :"+arr[j]);
-                  System.out.println(i+"  :"+j);
+                  System.out.println("index :"+i+"  : index "+j);
               }
             }
         }

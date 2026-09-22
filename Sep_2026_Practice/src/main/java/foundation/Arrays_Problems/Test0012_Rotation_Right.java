@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 /*
 Right
+ {1,2,3,4,5,};
+[4, 5, 1, 2, 3] //output
 Step 1 -> Reverse Whole Array
 Step 2 -> Reverse Up to K
 Step 3 --> From K to End
