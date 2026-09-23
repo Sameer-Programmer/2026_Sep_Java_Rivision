@@ -8,7 +8,7 @@
   <a href="https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision"><img src="https://img.shields.io/badge/Repository-Java%20Revision-1f6feb?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
   <img src="https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21" />
   <img src="https://img.shields.io/badge/Maven-Project-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven project" />
-  <img src="https://img.shields.io/badge/Exercises-104-2ea44f?style=for-the-badge" alt="104 Java source files" />
+  <img src="https://img.shields.io/badge/Java%20Files-176-2ea44f?style=for-the-badge" alt="176 Java files" />
 </p>
 
 <p>
@@ -27,7 +27,7 @@
 
 ## 🧭 About this project
 
-This repository is a practical Java revision notebook built from focused examples and nearby study notes. It progresses from language fundamentals and algorithmic problem solving into collections and object-oriented programming.
+This repository is a practical Java and test-automation revision notebook built from focused examples and nearby study notes. It progresses from language fundamentals and algorithmic problem solving into collections, object-oriented programming, Selenium WebDriver, TestNG, and API testing with Rest Assured.
 
 The project is intentionally maintained as learning material rather than a production application. Class names and a few original spelling variations are retained to preserve the progression of the revision sessions.
 
@@ -86,7 +86,7 @@ flowchart LR
 
 ## 📚 What is covered
 
-The examples currently include **105 Java source files** and **65 test Java files**, plus supporting notes, study documents, demo pages, reports, configuration, and test data across the following areas:
+The project currently includes **109 Java files under `src/main/java`**, **67 Java test files under `src/test/java`**, plus supporting notes, study documents, demo pages, reports, configuration, and test data across the following areas:
 
 | Icon | Area | Package(s) | Focus |
 | :---: | --- | --- | --- |
@@ -111,6 +111,7 @@ The examples currently include **105 Java source files** and **65 test Java file
 | 🔌 | Interfaces | `oops.interfaceConcepts` | Interface notes, differences, and implementation examples |
 | 🧪 | Selenium practice | `seleniumPart1` | Locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, frames, alerts, dropdowns, checkboxes, JavaScript execution, screenshots, Actions, file upload and existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, PDF download and content validation, and Cookies using TestNG |
 | 🧪 | TestNG practice | `TestNgFolder`, `ThreadLocalConcept` | TestNG defaults, annotations, priorities, soft and hard assertions, dependencies, multiple tests in one session, groups, include/exclude configuration, XML structure, DataProviders, parameters, Excel utilities, listeners, report generation, parallel methods, thread IDs, and `ThreadLocal<WebDriver>` driver isolation |
+| 🌐 | API testing | `RestAssured` | REST response validation practice using Rest Assured |
 | 📄 | Revision documents | `Documents`, `selenium_Notes` | Array and string reference notes, Selenium exception-handling notes, properties-file notes, Excel-reading notes, and PDF download-validation steps |
 | 🧪 | Supporting practice | `Workouts` | Additional focused TestNG exercises and workout examples |
 
@@ -169,6 +170,8 @@ Sep_2026_Practice/
     │   ├── Test005Excel/
     │   ├── Test006Parameters/
     │   └── Test007ListnersAndReportgeneration/
+    ├── RestAssured/
+    │   └── Test001_ValidateResponse.java
     ├── ThreadLocalConcept/
     ├── seleniumPart1/
     │   ├── Test001Locators/
@@ -211,6 +214,7 @@ Sep_2026_Practice/
 - Log4j is included for PDF validation logging support
 - TestNG is used for assertions, dependencies, groups, and XML suite execution
 - ExtentReports is included for HTML report generation
+- Rest Assured is included for REST API response validation practice
 
 ### ⚙️ Compile with Maven
 
@@ -257,8 +261,9 @@ Browser-launching examples may need a locally installed browser, matching driver
 6. **Complete the OOP path** — inheritance, abstraction, interfaces, overloading, overriding, and `super`.
 7. **Explore Selenium practice** — locators, browser actions, waits, navigation, file handling, Shadow DOM, Chrome options, date pickers, web tables, pagination, configuration files, Excel data, broken-link checks, PDF download validation, and Cookies.
 8. **Learn TestNG execution** — annotations, defaults, priorities, assertions, dependencies, groups, shared sessions, XML suites, DataProviders, parameters, listeners, reports, and parallel execution with `ThreadLocal<WebDriver>`.
-9. **Extend core Java practice** — two-dimensional arrays and structured data traversal.
-10. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
+9. **Explore API testing** — validate REST responses with Rest Assured and connect API checks to broader automation workflows.
+10. **Extend core Java practice** — two-dimensional arrays and structured data traversal.
+11. **Test your understanding** — change inputs and add edge cases such as empty values, single-element arrays, duplicates, negative numbers, and already-sorted data.
 
 ## 💡 Practice approach
 
@@ -278,6 +283,7 @@ The repository contains both executable Java examples and plain-text revision no
 | --- | --- |
 | 🏠 Repository | [2026_Sep_Java_Rivision](https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision) |
 | 📂 Java source tree | [`src/main/java`](./src/main/java) |
+| 🧪 Test source tree | [`src/test/java`](./src/test/java) |
 | ⚙️ Maven configuration | [`pom.xml`](./pom.xml) |
 
 ## ⚠️ Current limitations
