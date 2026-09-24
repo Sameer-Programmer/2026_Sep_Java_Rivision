@@ -1,0 +1,41 @@
+jsonPath() is a method of the RestAssured Response object
+that returns a JsonPath object.
+
+JsonPath jp = rs.jsonPath();
+What does it do?
+
+It allows you to navigate through the JSON response and extract values.
+
+For example, response:
+
+{
+  "id": 8635893,
+  "name": "Trista",
+  "email": "suk.cassin@hotmail.com",
+  "status": "inactive"
+}
+
+Then:
+
+String name = rs.jsonPath().getString("name");
+int id = rs.jsonPath().getInt("id");
+Simple interview explanation
+
+"jsonPath() is a method provided by RestAssured's Response interface.
+It returns a JsonPath object,
+ which we use to parse and navigate the JSON response
+ and extract specific values."
+
+Think:
+
+Response
+   ↓
+jsonPath()
+   ↓
+JsonPath object
+   ↓
+getString("name")
+getInt("id")
+getString("email")
+
+So jsonPath() itself is a method, while JsonPath is the object/type returned by that method.

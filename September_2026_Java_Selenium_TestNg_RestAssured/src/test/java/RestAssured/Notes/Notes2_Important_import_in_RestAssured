@@ -1,0 +1,181 @@
+import static io.restassured.RestAssured.*; // for Http methods
+import static io.restassured.matcher.RestAssuredMatchers.*; //validate REST Assured responses using REST Assured matchers.
+import static org.hamcrest.Matchers.*;//Provides Hamcrest matchers used for assertions/validation.
+
+============================================================
+        REST ASSURED — IMPORTANT STATIC IMPORTS
+============================================================
+
+1. import static io.restassured.RestAssured.*;
+
+PURPOSE:
+--------
+Used for REST Assured request methods.
+
+It allows us to directly use:
+
+    given()
+    when()
+    then()
+    get()
+    post()
+    put()
+    delete()
+    baseURI
+
+Without writing:
+
+    RestAssured.given()
+    RestAssured.when()
+    RestAssured.get()
+
+
+EXAMPLE:
+--------
+
+given()
+    .header("Authorization", "Bearer " + token)
+    .body(requestBody)
+.when()
+    .post(url)
+.then()
+    .statusCode(201);
+
+
+------------------------------------------------------------
+
+2. import static io.restassured.matcher.RestAssuredMatchers.*;
+
+PURPOSE:
+--------
+Provides REST Assured specific matchers.
+
+Used when we need to validate REST Assured responses using REST Assured matchers.
+using REST Assured matchers.
+
+Example:
+
+    body("response", someRestAssuredMatcher);
+
+
+NOTE:
+-----
+This import is NOT required for every REST Assured test.
+
+If you are not using any RestAssuredMatchers,
+you can remove this import.
+
+
+------------------------------------------------------------
+
+3. import static org.hamcrest.Matchers.*;
+
+PURPOSE:
+--------
+Provides Hamcrest matchers used for assertions/validation.
+
+Common matchers:
+
+    equalTo()
+    not()
+    hasItem()
+    hasItems()
+    containsString()
+    startsWith()
+    endsWith()
+    greaterThan()
+    lessThan()
+    nullValue()
+
+
+EXAMPLE:
+--------
+
+.then()
+    .statusCode(200)
+    .body("name", equalTo("Sameer"));
+
+
+Here:
+
+    equalTo("Sameer")
+
+comes from:
+
+    org.hamcrest.Matchers.*
+
+
+------------------------------------------------------------
+
+QUICK MEMORY TABLE
+------------------------------------------------------------
+
+IMPORT                              PURPOSE
+------------------------------------------------------------
+
+RestAssured.*
+        ↓
+given(), when(), then(), get(),
+post(), put(), delete()
+
+        → Used to BUILD and SEND API requests
+
+
+RestAssuredMatchers.*
+        ↓
+REST Assured-specific matchers
+
+        → Used for REST Assured-specific validation
+
+
+org.hamcrest.Matchers.*
+        ↓
+equalTo(), hasItem(), containsString(),
+greaterThan(), etc.
+
+        → Used for RESPONSE ASSERTIONS / VALIDATION
+
+
+------------------------------------------------------------
+EASY WAY TO REMEMBER
+------------------------------------------------------------
+
+RestAssured.*
+      ↓
+REQUEST
+
+RestAssuredMatchers.*
+      ↓
+REST ASSURED MATCHERS
+
+Hamcrest Matchers.*
+      ↓
+ASSERTIONS / VALIDATION
+
+
+IMPORTANT:
+----------
+
+You don't necessarily need all 3 imports in every test.
+
+For your current POST test, if you only use:
+
+    given()
+    when()
+    post()
+
+you mainly need:
+
+    import static io.restassured.RestAssured.*;
+
+If you later add:
+
+    .then()
+    .statusCode(201)
+    .body("name", equalTo("Sameer"));
+
+then you need:
+
+    import static org.hamcrest.Matchers.*;
+
+============================================================

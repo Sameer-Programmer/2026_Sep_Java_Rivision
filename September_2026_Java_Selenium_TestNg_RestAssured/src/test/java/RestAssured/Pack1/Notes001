@@ -1,0 +1,28 @@
+/*
+API Request
+    ↓
+Response rs
+    ↓
+    Response is an interface,
+ ┌───────────────┬──────────────┬─────────────┐
+ │ Status Code   │ Body         │ Headers     │
+ │ rs.statusCode │ rs.asString  │ rs.headers  │
+ └───────────────┴──────────────┴─────────────┘
+                       ↓
+                  JSON Response
+                       ↓
+              rs.jsonPath()
+                       ↓
+                id / name / email
+ *
+ rs.statusCode();       // Status code
+ rs.asString();         // Response body
+ rs.asPrettyString();   // Pretty response body
+ rs.headers();          // Headers
+ rs.cookies();          // Cookies
+ rs.time();             // Response time
+
+ int id = rs.jsonPath().getInt("id");
+ String name = rs.jsonPath().getString("name");
+ String email = rs.jsonPath().getString("email");
+ String status = rs.jsonPath().getString("status");

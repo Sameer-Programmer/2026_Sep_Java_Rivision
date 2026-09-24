@@ -1,0 +1,153 @@
+============================================================
+        TESTNG ISSUE — "Instantiating tests..." STUCK
+============================================================
+
+ISSUE:
+------
+TestNG was getting stuck at:
+
+    Instantiating tests...
+
+Reason:
+-------
+I created an object of the SAME TestNG class inside the class:
+
+    Test002_Post ts = new Test002_Post();
+
+
+WHY THIS CAUSES THE PROBLEM:
+----------------------------
+
+When Java creates a Test002_Post object:
+
+    new Test002_Post()
+            ↓
+    Class initialization starts
+            ↓
+    Test002_Post ts = new Test002_Post()
+            ↓
+    Creates another Test002_Post object
+            ↓
+    Again creates another Test002_Post object
+            ↓
+    Again...
+            ↓
+           ∞
+
+
+This causes RECURSIVE OBJECT CREATION.
+
+
+TESTNG FLOW:
+------------
+
+TestNG
+   ↓
+Creates Test002_Post object
+   ↓
+Initializes class variables
+   ↓
+Finds @Test method
+   ↓
+Executes m1()
+
+
+But because of:
+
+    Test002_Post ts = new Test002_Post();
+
+the object creation keeps repeating.
+
+
+WRONG:
+------
+
+public class Test002_Post {
+
+    Test002_Post ts = new Test002_Post();
+
+    @Test
+    public void m1() {
+        // test code
+    }
+}
+
+
+CORRECT:
+--------
+
+public class Test002_Post {
+
+    @Test
+    public void m1() {
+        // test code
+    }
+}
+
+
+IMPORTANT:
+----------
+
+TestNG automatically creates the object of the test class.
+
+We DON'T need to manually create:
+
+    Test002_Post ts = new Test002_Post();
+
+
+KEY POINT TO REMEMBER:
+----------------------
+
+For a TestNG test class:
+
+    TestNG → Creates Object → Finds @Test → Executes Test
+
+
+If we create the same class object inside itself:
+
+    new Test002_Post()
+            ↓
+    new Test002_Post()
+            ↓
+    new Test002_Post()
+            ↓
+    ...
+
+This can cause the test execution to get stuck at:
+
+    "Instantiating tests..."
+
+
+INTERVIEW POINT:
+----------------
+
+Question:
+Why should we not create an object of the TestNG test class
+inside itself?
+
+Answer:
+TestNG automatically creates the test class instance.
+Creating another instance of the same class during its own
+initialization causes recursive object creation and can prevent
+TestNG from completing test instantiation.
+
+
+REMEMBER:
+---------
+
+❌ Don't do:
+
+    Test002_Post ts = new Test002_Post();
+
+
+✅ Do:
+
+    public class Test002_Post {
+
+        @Test
+        public void m1() {
+            // test code
+        }
+    }
+
+============================================================
