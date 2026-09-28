@@ -1,4 +1,4 @@
-package RestAssured.Pack1;
+package RestAssured.Pack1GroundWork;
 
 import io.restassured.response.Response;
 import org.testng.annotations.Test;

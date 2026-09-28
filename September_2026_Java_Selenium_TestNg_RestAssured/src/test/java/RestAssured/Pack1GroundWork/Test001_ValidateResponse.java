@@ -1,4 +1,4 @@
-package RestAssured.Pack1;
+package RestAssured.Pack1GroundWork;
 
 import static io.restassured.RestAssured.*;
 import io.restassured.response.Response;

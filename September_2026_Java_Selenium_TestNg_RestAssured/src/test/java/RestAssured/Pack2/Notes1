@@ -1,0 +1,4 @@
+| Concept             | Conversion         | Commonly used    |
+| ------------------- | ------------------ | ---------------- |
+| **Serialization**   | Java Object → JSON | Sending request  |
+| **Deserialization** | JSON → Java Object | Reading response |

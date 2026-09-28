@@ -1,6 +1,6 @@
 STRING CONVERSION — SHORT NOTES
 
-String.valueOf() can convert primitive values and objects into a String.
+String.valueOf() can convert primitive Data type  values and objects into a String.
 
 String.valueOf()
     ↓

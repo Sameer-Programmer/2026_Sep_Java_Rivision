@@ -1,0 +1,29 @@
+m1()
+  │
+  ├── Generate Faker data
+  │
+  ├── Create JSON
+  │
+  ├── POST /users
+  │
+  ├── Response → 201
+  │
+  ├── Extract ID
+  │      ↓
+  │    id = 12345
+  │
+  └── context.setAttribute("key", 12345)
+                    │
+                    ↓
+          ITestContext stores ID
+                    │
+                    ↓
+getResponseById()
+  │
+  ├── context.getAttribute("key")
+  │
+  ├── Gets 12345
+  │
+  ├── GET /users/12345
+  │
+  └── Assert → 200
