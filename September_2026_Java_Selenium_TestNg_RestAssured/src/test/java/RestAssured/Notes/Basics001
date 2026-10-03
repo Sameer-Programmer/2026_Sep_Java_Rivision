@@ -1,0 +1,49 @@
+If the API response is:
+[
+  {
+    "id": 123,
+    "name": "John"
+  },
+  {
+    "id": 8646418,
+    "name": "Bhuvanesh Khatri"
+  }
+]
+
+What do we call each part?
+- The entire response → JSON array
+- Each { ... } inside the array → JSON object
+- "id": 8646418 → key-value pair
+- id → key/property
+- 8646418 → value
+- name → key/property
+- "Bhuvanesh Khatri" → value
+So:
+JSON Response
+     ↓
+   Array
+     ↓
+ ┌───────────────┐
+ │ JSON Object   │
+ │ id: 123       │
+ │ name: John    │
+ └───────────────┘
+     ↓
+ ┌───────────────┐
+ │ JSON Object   │
+ │ id: 8646418   │
+ │ name: Bhuvanesh│
+ └───────────────┘
+
+Therefore, in:
+find{it.id==8646418}.name   // json Query Parameter
+
+find{it.id==8646418}.name
+│    │  │  │        │
+│    │  │  │        └── Field to extract
+│    │  │  └─────────── Value to compare
+│    │  └────────────── Field being checked
+│    └───────────────── Current object
+└────────────────────── Search for matching object
+
+it represents each JSON object currently being checked.
