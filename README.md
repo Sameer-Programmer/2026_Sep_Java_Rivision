@@ -12,9 +12,9 @@
 </p>
 
 <p>
-  <a href="./src/main/java">📂 Browse source</a>
+  <a href="./September_2026_Java_Selenium_TestNg_RestAssured/src/main/java">📂 Browse source</a>
   ·
-  <a href="./pom.xml">⚙️ View Maven config</a>
+  <a href="./September_2026_Java_Selenium_TestNg_RestAssured/pom.xml">⚙️ View Maven config</a>
   ·
   <a href="https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision">⭐ Visit repository</a>
 </p>
@@ -126,9 +126,8 @@ The project currently includes **113 Java files under `src/main/java`**, **78 Ja
 ## 🗂️ Project structure
 
 ```text
-September_2026_Java_Selenium_TestNg_RestAssured/
+September_2026_Java_Selenium_TestNg_RestAssured/ (practice module)
 ├── pom.xml
-├── README.md
 ├── Documents/
 │   ├── Arrays.pdf
 │   ├── Strings.pdf
@@ -246,7 +245,7 @@ cd September_2026_Java_Selenium_TestNg_RestAssured
 mvn clean test
 ```
 
-The project contains standalone Java examples together with Selenium/TestNG practice tests. Maven compiles the main source tree and runs the configured test sources; browser-based examples may require a compatible browser and driver setup.
+The project contains standalone Java examples together with Selenium, TestNG, and Rest Assured practice tests. Maven compiles the main source tree and runs the configured test sources; browser-based examples may require a compatible browser and driver setup.
 
 ### ▶️ Run an individual exercise
 
@@ -313,13 +312,13 @@ The repository contains both executable Java examples and plain-text revision no
 | Resource | Link |
 | --- | --- |
 | 🏠 Repository | [2026_Sep_Java_Rivision](https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision) |
-| 📂 Java source tree | [`src/main/java`](./src/main/java) |
-| 🧪 Test source tree | [`src/test/java`](./src/test/java) |
-| ⚙️ Maven configuration | [`pom.xml`](./pom.xml) |
+| 📂 Java source tree | [`src/main/java`](./September_2026_Java_Selenium_TestNg_RestAssured/src/main/java) |
+| 🧪 Test source tree | [`src/test/java`](./September_2026_Java_Selenium_TestNg_RestAssured/src/test/java) |
+| ⚙️ Maven configuration | [`pom.xml`](./September_2026_Java_Selenium_TestNg_RestAssured/pom.xml) |
 
 ## ⚠️ Current limitations
 
-- The test sources currently focus on Selenium/TestNG practice rather than a broad unit-test suite; browser-based tests may require local setup.
+- The test sources currently focus on Selenium, TestNG, and Rest Assured practice rather than a broad unit-test suite; browser-based tests may require local setup.
 - Some filenames and package names retain historical spelling and capitalization choices from the practice sessions.
 - No license file is currently included. Add an appropriate license before redistributing the code publicly or incorporating it into another project.
 
