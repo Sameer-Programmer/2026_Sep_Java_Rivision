@@ -8,7 +8,7 @@
   <a href="https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision"><img src="https://img.shields.io/badge/Repository-Java%20Revision-1f6feb?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
   <img src="https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21" />
   <img src="https://img.shields.io/badge/Maven-Project-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven project" />
-  <img src="https://img.shields.io/badge/Java%20Files-194-2ea44f?style=for-the-badge" alt="194 Java files" />
+  <img src="https://img.shields.io/badge/Java%20Files-199-2ea44f?style=for-the-badge" alt="199 Java files" />
 </p>
 
 <p>
@@ -89,11 +89,13 @@ flowchart LR
     F --> F3[Cookies & Headers]
     F --> F4[Response Validation]
     F --> F5[JSON Schema Validation]
+    F --> F6[XML Validation]
+    F --> F7[CRUD Workflows]
 ```
 
 ## 📚 What is covered
 
-The project currently includes **113 Java files under `src/main/java`**, **81 Java test files under `src/test/java`**, and **194 Java files in total**, plus supporting notes, study documents, demo pages, reports, configuration, and test data across the following areas:
+The project currently includes **113 Java files under `src/main/java`**, **86 Java test files under `src/test/java`**, and **199 Java files in total**, plus supporting notes, study documents, demo pages, reports, configuration, and test data across the following areas:
 
 | Icon | Area | Package(s) | Focus |
 | :---: | --- | --- | --- |
@@ -119,7 +121,7 @@ The project currently includes **113 Java files under `src/main/java`**, **81 Ja
 | 🔌 | Interfaces | `oops.interfaceConcepts` | Interface notes, differences, and implementation examples |
 | 🧪 | Selenium practice | `seleniumPart1` | Locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, frames, alerts, dropdowns, checkboxes, JavaScript execution, screenshots, Actions, file upload and existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, PDF download and content validation, and Cookies using TestNG |
 | 🧪 | TestNG practice | `TestNgFolder`, `ThreadLocalConcept` | TestNG defaults, annotations, priorities, soft and hard assertions, dependencies, multiple tests in one session, groups, include/exclude configuration, XML structure, DataProviders, parameters, Excel utilities, listeners, report generation, parallel methods, thread IDs, and `ThreadLocal<WebDriver>` driver isolation |
-| 🌐 | API testing | `RestAssured` | Basic responses, POST requests, query and path parameters, cookies, headers, response assertions, JSON schema validation, XML validation, and API-focused notes |
+| 🌐 | API testing | `RestAssured`, `RestAssured.framework`, `RestAssured.Pack5_Framework` | Basic responses, POST requests, query and path parameters, cookies, headers, response assertions, JSON schema validation, XML validation, negative and edge-case tests, reusable request specifications, endpoint clients, and CRUD workflows |
 | 📄 | Revision documents | `Documents`, `selenium_Notes` | Array and string reference notes, Selenium exception-handling notes, properties-file notes, Excel-reading notes, and PDF download-validation steps |
 | 🧪 | Supporting practice | `Workouts` | Additional focused TestNG exercises and workout examples |
 
@@ -192,6 +194,8 @@ September_2026_Java_Selenium_TestNg_RestAssured/ (practice module)
     │   │   └── Test007_JsonSchemaValidation.java
     │   ├── Pack2/
     │   ├── Pack3_Postuser/
+    │   ├── Pack5_Framework/
+    │   ├── framework/
     │   └── xmlValidation/
     ├── ThreadLocalConcept/
     ├── seleniumPart1/
@@ -221,6 +225,31 @@ September_2026_Java_Selenium_TestNg_RestAssured/ (practice module)
     ├── selenium_Notes/
     │   └── SeleniumExeceptions
     └── Workouts/
+```
+
+## 🌐 Rest Assured learning path
+
+The API practice now progresses from individual requests toward reusable automation:
+
+1. **Basics** — status codes, response time, headers, cookies, and response bodies.
+2. **Requests** — GET, POST, PUT, DELETE, JSON payloads, query parameters, and path parameters.
+3. **Validation** — response fields, JSON schema, XML, headers, and response contracts.
+4. **Negative and edge cases** — unknown IDs, empty values, invalid payloads, missing headers, and boundary data.
+5. **Reusable framework** — shared request specifications, endpoint clients, centralized configuration, and test data.
+6. **End-to-end workflows** — create → read → update → delete with IDs chained between requests and cleanup.
+
+The runnable framework examples are documented in [`RestAssured/README.md`](./September_2026_Java_Selenium_TestNg_RestAssured/src/test/java/RestAssured/README.md). Run the public mock-API examples with:
+
+```bash
+cd September_2026_Java_Selenium_TestNg_RestAssured
+mvn -Dtest=RestAssured.Pack5_Framework.JsonPlaceholderApiTest test
+```
+
+For the authenticated GoRest lifecycle, provide `GOREST_TOKEN` as an environment variable; tokens are never stored in source control:
+
+```bash
+export GOREST_TOKEN="your-token"
+mvn -Dtest=RestAssured.Pack5_Framework.GorestCrudWorkflowTest test
 ```
 
 ## 🚀 Getting started
@@ -317,6 +346,7 @@ The repository contains both executable Java examples and plain-text revision no
 | 🏠 Repository | [2026_Sep_Java_Rivision](https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision) |
 | 📂 Java source tree | [`src/main/java`](./September_2026_Java_Selenium_TestNg_RestAssured/src/main/java) |
 | 🧪 Test source tree | [`src/test/java`](./September_2026_Java_Selenium_TestNg_RestAssured/src/test/java) |
+| 🌐 Rest Assured guide | [`RestAssured/README.md`](./September_2026_Java_Selenium_TestNg_RestAssured/src/test/java/RestAssured/README.md) |
 | ⚙️ Maven configuration | [`pom.xml`](./September_2026_Java_Selenium_TestNg_RestAssured/pom.xml) |
 
 ## ⚠️ Current limitations
