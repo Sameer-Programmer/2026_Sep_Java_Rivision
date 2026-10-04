@@ -8,7 +8,7 @@
   <a href="https://github.com/Sameer-Programmer/2026_Sep_Java_Rivision"><img src="https://img.shields.io/badge/Repository-Java%20Revision-1f6feb?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
   <img src="https://img.shields.io/badge/Java-21-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java 21" />
   <img src="https://img.shields.io/badge/Maven-Project-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white" alt="Maven project" />
-  <img src="https://img.shields.io/badge/Java%20Files-191-2ea44f?style=for-the-badge" alt="191 Java files" />
+  <img src="https://img.shields.io/badge/Java%20Files-194-2ea44f?style=for-the-badge" alt="194 Java files" />
 </p>
 
 <p>
@@ -93,7 +93,7 @@ flowchart LR
 
 ## 📚 What is covered
 
-The project currently includes **113 Java files under `src/main/java`**, **78 Java test files under `src/test/java`**, and **191 Java files in total**, plus supporting notes, study documents, demo pages, reports, configuration, and test data across the following areas:
+The project currently includes **113 Java files under `src/main/java`**, **81 Java test files under `src/test/java`**, and **194 Java files in total**, plus supporting notes, study documents, demo pages, reports, configuration, and test data across the following areas:
 
 | Icon | Area | Package(s) | Focus |
 | :---: | --- | --- | --- |
@@ -119,7 +119,7 @@ The project currently includes **113 Java files under `src/main/java`**, **78 Ja
 | 🔌 | Interfaces | `oops.interfaceConcepts` | Interface notes, differences, and implementation examples |
 | 🧪 | Selenium practice | `seleniumPart1` | Locators, dynamic XPath, WebDriver methods, conditional methods, waits, navigation, window handles, frames, alerts, dropdowns, checkboxes, JavaScript execution, screenshots, Actions, file upload and existence checks, Shadow DOM, Chrome options, date pickers, web tables, pagination, properties and Excel reading, broken-link checks, PDF download and content validation, and Cookies using TestNG |
 | 🧪 | TestNG practice | `TestNgFolder`, `ThreadLocalConcept` | TestNG defaults, annotations, priorities, soft and hard assertions, dependencies, multiple tests in one session, groups, include/exclude configuration, XML structure, DataProviders, parameters, Excel utilities, listeners, report generation, parallel methods, thread IDs, and `ThreadLocal<WebDriver>` driver isolation |
-| 🌐 | API testing | `RestAssured` | Request and response basics, POST requests, query and path parameters, cookies, headers, response assertions, JSON schema validation, and API-focused notes |
+| 🌐 | API testing | `RestAssured` | Basic responses, POST requests, query and path parameters, cookies, headers, response assertions, JSON schema validation, XML validation, and API-focused notes |
 | 📄 | Revision documents | `Documents`, `selenium_Notes` | Array and string reference notes, Selenium exception-handling notes, properties-file notes, Excel-reading notes, and PDF download-validation steps |
 | 🧪 | Supporting practice | `Workouts` | Additional focused TestNG exercises and workout examples |
 
@@ -179,7 +179,9 @@ September_2026_Java_Selenium_TestNg_RestAssured/ (practice module)
     │   ├── Test006Parameters/
     │   └── Test007ListnersAndReportgeneration/
     ├── RestAssured/
+    │   ├── BasicResponse/
     │   ├── Notes/
+    │   ├── PAck4/
     │   ├── Pack1GroundWork/
     │   │   ├── Test001_ValidateResponse.java
     │   │   ├── Test002_Post.java
@@ -189,7 +191,8 @@ September_2026_Java_Selenium_TestNg_RestAssured/ (practice module)
     │   │   ├── Test006_ResponseValidation.java
     │   │   └── Test007_JsonSchemaValidation.java
     │   ├── Pack2/
-    │   └── Pack3_Postuser/
+    │   ├── Pack3_Postuser/
+    │   └── xmlValidation/
     ├── ThreadLocalConcept/
     ├── seleniumPart1/
     │   ├── Test001Locators/
