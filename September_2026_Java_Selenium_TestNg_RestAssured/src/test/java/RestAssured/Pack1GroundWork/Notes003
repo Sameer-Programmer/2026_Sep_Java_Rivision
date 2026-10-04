@@ -1,0 +1,90 @@
+========================================================
+HEADER vs HEADERS – REST ASSURED
+========================================================
+
+1. Header
+-----------
+Header represents a SINGLE HTTP header.
+
+Class:
+import io.restassured.http.Header;
+
+Example:
+Header header = new Header("Content-Type", "application/json");
+
+Syntax:
+Header headerName = new Header("Header-Name", "Header-Value");
+
+
+2. Headers
+-----------
+Headers represents MULTIPLE HTTP headers (a collection of Header objects).
+
+Class:
+import io.restassured.http.Headers;
+
+Example:
+Headers headers = new Headers(
+        new Header("Content-Type", "application/json"),
+        new Header("Authorization", "Bearer token")
+);
+
+
+3. Getting Response Headers
+----------------------------
+To get all response headers:
+
+Headers headers = rs.headers();
+
+To get a specific header value:
+
+String contentType = rs.header("Content-Type");
+
+OR
+
+String contentType = headers.getValue("Content-Type");
+
+
+4. Common Header Assertions
+----------------------------
+Verify header exists:
+
+Assert.assertNotNull(rs.header("Content-Type"));
+
+
+Verify exact header value:
+
+Assert.assertEquals(
+        rs.header("Content-Type"),
+        "application/json"
+);
+
+
+Verify header contains a value:
+
+Assert.assertTrue(
+        rs.header("Content-Type").contains("application/json")
+);
+
+
+5. Important Headers to Validate
+---------------------------------
+- Content-Type
+- Content-Length (when required)
+- Cache-Control (when required)
+- Authorization (request header)
+- Security headers (when required)
+
+========================================================
+EASY REMEMBER
+========================================================
+
+Header  → ONE header
+Headers → MULTIPLE headers / collection
+
+Example:
+
+Header  → Content-Type = application/json
+
+Headers → Content-Type + Authorization + Accept + etc.
+========================================================
